@@ -17,7 +17,7 @@
     <script src="<?=base_url()?>assets/js/jquery.mobile-1.3.2.min.js"></script>
     <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
     <script type="text/javascript"
-  		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD--LbyOwfiFO9dAB2XQyYcEEo46WKoEBg" >
+  		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsTEMEPiqxEtq9xlzSE-LsUE7q5DXdX-0" >
  	</script>
   	<script>
  		var lang = '<?=current_lang()?>';
