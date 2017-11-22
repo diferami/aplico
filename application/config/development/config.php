@@ -245,13 +245,13 @@ $config['encryption_key'] = 'qazxsw21';
 |
 */
 $config['sess_cookie_name']		= 'cisession';
-$config['sess_expiration']		= 7200;
+$config['sess_expiration']		= 86400; //24 horas
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= FALSE;
 $config['sess_use_database']	= TRUE;
 $config['sess_table_name']		= 'ci_sessions';
 $config['sess_match_ip']		= FALSE;
-$config['sess_match_useragent']	= FALSE;
+$config['sess_match_useragent']	= TRUE;
 $config['sess_time_to_update']	= 300;
 
 /*
@@ -279,7 +279,7 @@ $config['cookie_secure']	= FALSE;
 | COOKIE data is encountered
 |
 */
-$config['global_xss_filtering'] = TRUE;
+$config['global_xss_filtering'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
@@ -358,25 +358,25 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
  //Custom config
-$config['app_path'] = 'http://pidataxi.dev/'; 
-$config['app_name'] = 'Fácil Taxi';
-$config['app_country'] = 'ecuador, quito';
-$config['app_icon'] = 'icon_development.png';
-$config['app_users_download'] = 'buskoo/TaxiBuskoo.apk';
-$config['app_agent_download'] = 'buskoo/TaxiBuskoo_Agente.apk';
-
-$config['copyright'] = 'Fácil Taxi - © 2013 GPTechnologies';
-$config['app_link'] = 'http://www.geocommerce.com.ec'; 
+$config['app_path'] = 'http://127.0.0.1/'; 
+$config['app_name'] = 'MotoTaps';
+$config['app_country'] = 'Colombia';
+$config['copyright'] = 'by GPTechnologies';
+$config['app_link'] = 'http://www.mototaps.com'; 
+$config['app_icon'] = 'icon_mototaps.png';
+$config['app_users_download'] = 'mototaps/mototapsUser.apk';
+$config['app_agent_download'] = 'mototaps/mototapsAgent.apk';
 
 $config['max_verification_attemps'] = 10;
-$config['verification_interval'] = 8000; //In milliseconds
+$config['verification_interval'] = 15000; //In milliseconds
  
-$config['agent_verification_interval'] = 8000; //In milliseconds
-$config['agent_updatelocation_interval'] = 8000; //In milliseconds
-$config['agent_message_inverval'] 		 = 60000; //cada minuto  
+$config['agent_verification_interval'] = 15000; //In milliseconds
+$config['agent_updatelocation_interval'] = 15000; //In milliseconds
+$config['agent_message_inverval'] 			= 3600000; //cada hora  
 
-$config['distance_call'] = 1000.5; //In kilometros
-$config['distance_call_sos'] = 3; //In kilometros
+
+$config['distance_call'] = 2.5; //In kilometros
+$config['distance_call_sos'] = 2.5; //In kilometros
 
  
 /* End of file config.php */
