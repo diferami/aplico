@@ -2,6 +2,6 @@ RewriteEngine on
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond $1 !^(index.php|css|js|images|robots.txt|assets|uploads|agent|agent/assets|user|user/assets) 
+
 RewriteRule ^(.*)$ index.php/$1 [L]
 
