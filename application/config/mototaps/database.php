@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'mototaps';
-$db['default']['password'] = 'm0t0t4p52011';
-$db['default']['database'] = 'mototaps';
+$db['default']['username'] = 'userbd.mototaps';
+$db['default']['password'] = 'm0t0t4p52005';
+$db['default']['database'] = 'aplico';
 //$db['default']['username'] = 'root';
 //$db['default']['password'] = '';
 //$db['default']['database'] = 'aplico';
