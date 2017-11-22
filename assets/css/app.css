@@ -1,0 +1,56 @@
+#map_canvas{
+	position: absolute;
+	max-height: inherit;
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+}
+
+
+.padding-0{
+	padding: 0 !important;
+}
+
+.black-bar {
+    background: linear-gradient(#3C3C3C, #111111) repeat scroll 0 0 #111111;
+    border: 1px solid #333333;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-shadow: 0 -1px 1px #000000;
+}
+
+.margin-0{
+	 margin: 0 !important;
+}
+
+.width-96{
+	width: 96% !important;
+}
+
+.imagenagent img {
+ max-width: 110px; 
+ height: auto;
+}
+
+.bgbanner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5000;}
+
+
+#phone-iframe-v{
+            height:711px;
+            width:420px;
+            background: no-repeat
+        }
+#phone-iframe-v iframe{
+            margin-top:140px;
+            margin-left: 0px;
+            height:428px;
+            width:310px
+}
+
+

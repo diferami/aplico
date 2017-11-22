@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><title>http://app.mitaxijj.com.ec/es#!</title><link rel="stylesheet" type="text/css" href="http%20_app.mitaxijj.com.ec_es%23%21_files/viewsource.css"></head><body contextmenu="actions" id="viewsource" class="highlight" style="-moz-tab-size: 4"><pre id="line1"><span></span><span class="doctype">&lt;!doctype html&gt;</span><span>
+<span id="line2"></span></span><span class="comment">&lt;!--[if IE 8]&gt;&lt;html class="no-js lt-ie9" lang="en"&gt;&lt;![endif]--&gt;</span><span>
+<span id="line3"></span></span><span class="comment">&lt;!--[if gt IE 8]&gt;&lt;!--&gt;</span><span></span><span>&lt;<span class="start-tag">html</span> <span class="attribute-name">class</span>="<a class="attribute-value">no-js</a>" <span class="attribute-name">lang</span>="<a class="attribute-value">en</a>"&gt;</span><span></span><span class="comment">&lt;!--&lt;![endif]--&gt;</span><span>
+<span id="line4"></span></span><span>&lt;<span class="start-tag">head</span>&gt;</span><span>
+<span id="line5"></span>    </span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">charset</span>="<a class="attribute-value">utf-8</a>" <span>/</span>&gt;</span><span>
+<span id="line6"></span>    </span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">name</span>="<a class="attribute-value">viewport</a>" <span class="attribute-name">content</span>="<a class="attribute-value">width=device-width, initial-scale=1.0</a>" <span>/</span>&gt;</span><span>
+<span id="line7"></span>    
+<span id="line8"></span>    </span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">http-equiv</span>="<a class="attribute-value">X-UA-Compatible</a>" <span class="attribute-name">content</span>="<a class="attribute-value">IE=edge</a>"&gt;</span><span>
+<span id="line9"></span>    </span><span>&lt;<span class="start-tag">meta</span> <span class="attribute-name">http-equiv</span>="<a class="attribute-value">X-UA-Compatible</a>" <span class="attribute-name">content</span>="<a class="attribute-value">IE=9</a>"&gt;</span><span>
+<span id="line10"></span>    
+<span id="line11"></span>    </span><span>&lt;<span class="start-tag">title</span>&gt;</span><span>MI TAXI JJ || GeoCommerce</span><span>&lt;/<span class="end-tag">title</span>&gt;</span><span>
+<span id="line12"></span>
+<span id="line13"></span>    </span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/assets/css/app.css" class="attribute-value">http://app.mitaxijj.com.ec/assets/css/app.css</a>" <span>/</span>&gt;</span><span>
+<span id="line14"></span>    </span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/assets/css/jquery.mobile-1.3.2.min.css" class="attribute-value">http://app.mitaxijj.com.ec/assets/css/jquery.mobile-1.3.2.min.css</a>" <span>/</span>&gt;</span><span>
+<span id="line15"></span>    </span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">shortcut icon</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/assets/images/iconweb.png" class="attribute-value">http://app.mitaxijj.com.ec/assets/images/iconweb.png</a>"&gt;</span><span>
+<span id="line16"></span> 
+<span id="line17"></span>    </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://app.mitaxijj.com.ec/assets/js/jquery-1.10.2.min.js" class="attribute-value">http://app.mitaxijj.com.ec/assets/js/jquery-1.10.2.min.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line18"></span>    </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://app.mitaxijj.com.ec/assets/js/jquery.mobile-1.3.2.min.js" class="attribute-value">http://app.mitaxijj.com.ec/assets/js/jquery.mobile-1.3.2.min.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line19"></span>
+<span id="line20"></span>    </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a href="view-source:http://maps.google.com/maps/api/js?sensor=true" class="attribute-value">http://maps.google.com/maps/api/js?sensor=true</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line21"></span>    </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://app.mitaxijj.com.ec//assets/js/ion.sound.js" class="attribute-value">http://app.mitaxijj.com.ec//assets/js/ion.sound.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span> 
+<span id="line22"></span>    </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://app.mitaxijj.com.ec//assets/js/jquery.balloon.js" class="attribute-value">http://app.mitaxijj.com.ec//assets/js/jquery.balloon.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line23"></span>    </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>='<a class="attribute-value">text/javascript</a>' <span class="attribute-name">src</span>='<a href="view-source:http://app.mitaxijj.com.ec/assets/js/jquery.marquee.min.js" class="attribute-value">assets/js/jquery.marquee.min.js</a>'&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line24"></span>
+<span id="line25"></span>    </span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line26"></span>
+<span id="line27"></span>    //$(document).on('pagebeforeshow', function () {
+<span id="line28"></span>    //var URL = $.mobile.path.parseUrl(window.location).toString().toLowerCase();
+<span id="line29"></span>
+<span id="line30"></span>     //   alert(URL);
+<span id="line31"></span>    //})
+<span id="line32"></span>
+<span id="line33"></span>  function onBackKeyDown() {
+<span id="line34"></span>    alert('back');
+<span id="line35"></span>    }
+<span id="line36"></span>
+<span id="line37"></span>        var lang = 'es';
+<span id="line38"></span>        var verification_interval = 5000;
+<span id="line39"></span>        var app_country = 'Ecuador, quito';
+<span id="line40"></span>        var searching_msg = '</span><span>&lt;h</span><span>1&gt;Buscando unidad...</span><span>&lt;/<span></span>h</span><span>1&gt;';//'</span><span>&lt;h</span><span>1&gt;Buscando....</span><span>&lt;/<span></span>h</span><span>1&gt;';
+<span id="line41"></span>        var msg_cancel_service = 'Esta seguro que desea cancelar su servicio de taxi?';
+<span id="line42"></span>        var msg_nomenclature = 'Por favor 
+asegúrate de ingresar la nomenclatura de tu ubicación. Puedes adicionar 
+referencia  como color de casa, edicifio, urbanización, manzana';
+<span id="line43"></span>        var msg_nomenclature_empty = 'La dirección no debe ser vacia. Por favor escriba su ubicación.';
+<span id="line44"></span>        var msg_configure_device = 'Por favor 
+configure su dispositivo para compartir su ubicación geográfica e 
+intente de nuevo.';
+<span id="line45"></span>        var msg_error_attempts = '';
+<span id="line46"></span>        var msg_address_not_found = 'No se encontró una dirección asociada a las coordenadas.';
+<span id="line47"></span>        var msg_error_geolocation = 'Error en la geolocalización.';
+<span id="line48"></span>        var msg_error_share_position = 'No has aceptado compartir tu posición.';
+<span id="line49"></span>        var msg_error_current_position = 'No se puede obtener la posición actual.';
+<span id="line50"></span>        var msg_error_exceeded_timeout = 'Hemos superado el tiempo de espera. Vuelve a intentarlo.';
+<span id="line51"></span>        var average = 'APP';
+<span id="line52"></span>        var uuid = '';
+<span id="line53"></span>        var model = '';
+<span id="line54"></span>        var platform = '';
+<span id="line55"></span>        var version = '';
+<span id="line56"></span>    </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line57"></span>
+<span id="line58"></span>    </span><span>&lt;<span class="start-tag">script</span>&gt;</span><span>
+<span id="line59"></span>
+<span id="line60"></span>    ion.sound({
+<span id="line61"></span>    sounds: [
+<span id="line62"></span>        {
+<span id="line63"></span>            name: "pito",
+<span id="line64"></span>            volume: 1
+<span id="line65"></span>        },
+<span id="line66"></span>        {
+<span id="line67"></span>            name: "alert",
+<span id="line68"></span>            volume: 1
+<span id="line69"></span>        },
+<span id="line70"></span>        {
+<span id="line71"></span>            name: "beep",
+<span id="line72"></span>            volume: 1
+<span id="line73"></span>        },
+<span id="line74"></span>        {
+<span id="line75"></span>            name: "login",
+<span id="line76"></span>            volume: 1
+<span id="line77"></span>        },
+<span id="line78"></span>        {
+<span id="line79"></span>            name: "confirmation",
+<span id="line80"></span>            volume: 1
+<span id="line81"></span>        },
+<span id="line82"></span>        {
+<span id="line83"></span>            name: "click",
+<span id="line84"></span>            volume: 1
+<span id="line85"></span>        },
+<span id="line86"></span>        {
+<span id="line87"></span>            name: "ring",
+<span id="line88"></span>            volume: 1
+<span id="line89"></span>        },
+<span id="line90"></span>        {
+<span id="line91"></span>            name: "searching",
+<span id="line92"></span>            volume: 1
+<span id="line93"></span>        },
+<span id="line94"></span>        {
+<span id="line95"></span>            name: "errorunidad",
+<span id="line96"></span>            volume: 1
+<span id="line97"></span>        },
+<span id="line98"></span>        {
+<span id="line99"></span>            name: "beep1",
+<span id="line100"></span>            volume: 1
+<span id="line101"></span>        }
+<span id="line102"></span>    ],
+<span id="line103"></span>    volume: 1,
+<span id="line104"></span>    path: "http://app.mitaxijj.com.ec/assets/audio/", 
+<span id="line105"></span>    preload: true
+<span id="line106"></span>    });
+<span id="line107"></span>
+<span id="line108"></span>    </span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line109"></span>    
+<span id="line110"></span>    </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a href="view-source:http://app.mitaxijj.com.ec/assets/js/mitrapana.js" class="attribute-value">http://app.mitaxijj.com.ec/assets/js/mitrapana.js</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
+<span id="line111"></span>
+<span id="line112"></span>    </span><span>&lt;<span class="start-tag">style</span>&gt;</span><span>
+<span id="line113"></span>    /*table, th, td{
+<span id="line114"></span>        border: 1px solid black;
+<span id="line115"></span>    }*/
+<span id="line116"></span>
+<span id="line117"></span>        #carreraPanel &gt; div {
+<span id="line118"></span>        padding: 0;
+<span id="line119"></span>        width: 84%;
+<span id="line120"></span>    }
+<span id="line121"></span>    #page1 &gt; 
+div.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-position-right.ui-panel-content-wrap-display-push.ui-panel-content-wrap-open
+ {
+<span id="line122"></span>        left: 16px;
+<span id="line123"></span>    } 
+<span id="line124"></span>    #page1 &gt; div.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-closed &gt; div.ui-header.ui-bar-e {
+<span id="line125"></span>        text-shadow: none;
+<span id="line126"></span>    }
+<span id="line127"></span>
+<span id="line128"></span>    #confirm-wrapper &gt; div.ui-content.ui-body-d &gt; div:nth-child(1) &gt; div {
+<span id="line129"></span>        width: 98%;
+<span id="line130"></span>    }
+<span id="line131"></span>
+<span id="line132"></span>    #confirm-wrapper {
+<span id="line133"></span>        width: 120%;
+<span id="line134"></span>    }
+<span id="line135"></span>
+<span id="line136"></span>    #confirm-wrapper &gt; div.ui-content.ui-body-d {
+<span id="line137"></span>        padding: 5px;
+<span id="line138"></span>    }
+<span id="line139"></span>
+<span id="line140"></span>    #call-form &gt; div {
+<span id="line141"></span>        margin: 0;
+<span id="line142"></span>    }
+<span id="line143"></span>
+<span id="line144"></span>    #linkgeo, #dashboard &gt; 
+div.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-closed
+ &gt; div.ui-header.ui-bar-e &gt; h3 &gt; a {
+<span id="line145"></span>      font-size:15px;
+<span id="line146"></span>      font-weight: bold;
+<span id="line147"></span>      text-decoration: none;
+<span id="line148"></span>      color: #0074D9;
+<span id="line149"></span>      text-shadow: none;
+<span id="line150"></span>    }
+<span id="line151"></span>
+<span id="line152"></span>    #cerrarventana{
+<span id="line153"></span>      text-align:left;
+<span id="line154"></span>      padding:3px;
+<span id="line155"></span>    }
+<span id="line156"></span>
+<span id="line157"></span>    #closemapmenu1 {
+<span id="line158"></span>        text-decoration: none;
+<span id="line159"></span>    }
+<span id="line160"></span>
+<span id="line161"></span>    #radioservice &gt; div.ui-slider.ui-slider-switch.ui-btn-down-d.ui-btn-corner-all{
+<span id="line162"></span>        width: 100%;
+<span id="line163"></span>    }
+<span id="line164"></span>
+<span id="line165"></span>    #agent-wrapper {
+<span id="line166"></span>        width: 120%;
+<span id="line167"></span>    }
+<span id="line168"></span>
+<span id="line169"></span>    #slider-mini {
+<span id="line170"></span>        display: none;
+<span id="line171"></span>        margin: 0;
+<span id="line172"></span>    }
+<span id="line173"></span>
+<span id="line174"></span>    #waiting-msg &gt; div &gt; div {
+<span id="line175"></span>        margin: 0;
+<span id="line176"></span>    }
+<span id="line177"></span>
+<span id="line178"></span>    #waiting-msg &gt; div &gt; div &gt; a {
+<span id="line179"></span>        width: 0;
+<span id="line180"></span>        height: 0;
+<span id="line181"></span>        border: 0;
+<span id="line182"></span>    }
+<span id="line183"></span>
+<span id="line184"></span>    #agent-wrapper &gt; div.ui-content.ui-body-d &gt; p:nth-child(1) {
+<span id="line185"></span>        margin-bottom: -5px;
+<span id="line186"></span>        margin-top: 0;
+<span id="line187"></span>    }
+<span id="line188"></span>
+<span id="line189"></span>    #agent-wrapper &gt; div.ui-content.ui-body-d &gt; table {
+<span id="line190"></span>        margin-bottom: -20px;
+<span id="line191"></span>    }
+<span id="line192"></span>
+<span id="line193"></span>    .ui-header, .ui-footer {
+<span id="line194"></span>        zoom: 0.9;
+<span id="line195"></span>    }
+<span id="line196"></span>
+<span id="line197"></span>    #userdatapanel &gt; div {
+<span id="line198"></span>        padding: 0;
+<span id="line199"></span>    }
+<span id="line200"></span>
+<span id="line201"></span>    #user-wrapper &gt; div.ui-header.ui-bar-e &gt; h1 {
+<span id="line202"></span>        text-align: left;
+<span id="line203"></span>        margin: 0;
+<span id="line204"></span>    }
+<span id="line205"></span>
+<span id="line206"></span>    #cerrarventana {
+<span id="line207"></span>    background-color: #284865;
+<span id="line208"></span>    padding: 3px;
+<span id="line209"></span>    text-decoration: none;
+<span id="line210"></span>    width: 117%;
+<span id="line211"></span>    text-shadow: none;
+<span id="line212"></span>    }
+<span id="line213"></span>
+<span id="line214"></span>    #cerrarventana1 {
+<span id="line215"></span>    background-color: #284865;
+<span id="line216"></span>    padding: 3px;
+<span id="line217"></span>    text-decoration: none;
+<span id="line218"></span>    width: 98%;
+<span id="line219"></span>    text-shadow: none;
+<span id="line220"></span>    text-align: right;
+<span id="line221"></span>    }
+<span id="line222"></span>
+<span id="line223"></span>    #closemapmenu1 {
+<span id="line224"></span>        color: white;
+<span id="line225"></span>    }
+<span id="line226"></span>
+<span id="line227"></span>     #map_canvas &gt; div &gt; 
+div:nth-child(1) &gt; div:nth-child(3) &gt; div:nth-child(4) &gt; div 
+&gt; div:nth-child(1) &gt; div:nth-child(2) {
+<span id="line228"></span>      height: 0px !important;
+<span id="line229"></span>    }
+<span id="line230"></span>
+<span id="line231"></span>    #map_canvas &gt; div &gt; div:nth-child(1)
+ &gt; div:nth-child(3) &gt; div:nth-child(4) &gt; div &gt; 
+div:nth-child(1) &gt; div:nth-child(4) {
+<span id="line232"></span>      height: 0px !important;
+<span id="line233"></span>    }
+<span id="line234"></span>
+<span id="line235"></span>    #map_canvas &gt; div &gt; div:nth-child(1)
+ &gt; div:nth-child(3) &gt; div:nth-child(4) &gt; div &gt; 
+div.gm-style-iw &gt; div &gt; div {
+<span id="line236"></span>      background-color: #F9F8F5;
+<span id="line237"></span>      margin: 0;
+<span id="line238"></span>      border: 2px solid #48b5e9;
+<span id="line239"></span>      border-radius: 10px;
+<span id="line240"></span>    }
+<span id="line241"></span>
+<span id="line242"></span>    #map_canvas &gt; div &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; div:nth-child(4) &gt; div &gt; div.gm-style-iw {
+<span id="line243"></span>      top: 15px !important;
+<span id="line244"></span>      left: 40px !important;
+<span id="line245"></span>    }
+<span id="line246"></span>
+<span id="line247"></span>    #map_canvas &gt; div &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; div:nth-child(4) &gt; div &gt; div:nth-child(3) {
+<span id="line248"></span>      opacity: 0 !important;
+<span id="line249"></span>    }
+<span id="line250"></span>
+<span id="line251"></span>    #dashboard &gt; 
+div.ui-panel-content-wrap.ui-body-c.ui-panel-animate.ui-panel-content-wrap-closed
+ &gt; div.ui-header.ui-bar-e &gt; h3 {
+<span id="line252"></span>        margin-bottom: 0;
+<span id="line253"></span>    }
+<span id="line254"></span>
+<span id="line255"></span>    #agent-call &gt; span {
+<span id="line256"></span>            font-size: 15px;
+<span id="line257"></span>        }
+<span id="line258"></span>
+<span id="line259"></span>    #btn-data-user &gt; span &gt; span {
+<span id="line260"></span>            font-size: 15px;
+<span id="line261"></span>        }
+<span id="line262"></span>
+<span id="line263"></span>    #agent-call {
+<span id="line264"></span>        border-radius: 5px;
+<span id="line265"></span>    }
+<span id="line266"></span>
+<span id="line267"></span>    #btn-data-user, #btn-localizame, #btn-real-time, #ayuda {
+<span id="line268"></span>        border-radius: 5px;
+<span id="line269"></span>    }
+<span id="line270"></span>
+<span id="line271"></span>    @media screen and (min-width: 800px) {
+<span id="line272"></span>        #btn-localizame &gt; span &gt; span.ui-btn-text {
+<span id="line273"></span>            font-size: 1.4em;
+<span id="line274"></span>        }
+<span id="line275"></span>        #btn-real-time &gt; span &gt; span.ui-btn-text {
+<span id="line276"></span>            font-size: 1.4em;
+<span id="line277"></span>        }
+<span id="line278"></span>        #ayuda &gt; span &gt; span.ui-btn-text {
+<span id="line279"></span>            font-size: 1.4em;
+<span id="line280"></span>        }
+<span id="line281"></span>        #btn-address-search &gt; span &gt; span.ui-btn-text {
+<span id="line282"></span>            font-size: 1.4em;   
+<span id="line283"></span>        }
+<span id="line284"></span>        #agent-call &gt; span &gt; span {
+<span id="line285"></span>            font-size: 1.3em;
+<span id="line286"></span>        }
+<span id="line287"></span>        #call-form &gt; div &gt; table:nth-child(2) &gt; tbody &gt; tr &gt; td:nth-child(1) {
+<span id="line288"></span>            font-size: 1.4em;   
+<span id="line289"></span>        }
+<span id="line290"></span>    }
+<span id="line291"></span>
+<span id="line292"></span>    </span><span>&lt;/<span class="end-tag">style</span>&gt;</span><span>
+<span id="line293"></span>
+<span id="line294"></span></span><span>&lt;/<span class="end-tag">head</span>&gt;</span><span>
+<span id="line295"></span> 
+<span id="line296"></span></span><span>&lt;<span class="start-tag">body</span>&gt;</span><span>
+<span id="line297"></span>
+<span id="line298"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">page</a>" <span class="attribute-name">id</span>="<a class="attribute-value">dashboard</a>" <span title="Atributo duplicado." class="attribute-name error">data-role</span>="<a class="attribute-value">page</a>" <span class="attribute-name">class</span>="<a class="attribute-value">jqm-demos ui-responsive-panel</a>" <span title="Atributo duplicado." class="attribute-name error">id</span>="<a class="attribute-value">panel-responsive-page1</a>" <span class="attribute-name">data-url</span>="<a class="attribute-value">panel-responsive-page1</a>"&gt;</span><span>
+<span id="line299"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-theme</span>="<a class="attribute-value">e</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">header</a>"&gt;</span><span>
+<span id="line300"></span>        </span><span>&lt;<span class="start-tag">table</span> <span class="attribute-name">border</span>=<a class="attribute-value">0</a> <span class="attribute-name">width</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">id</span>="<a class="attribute-value">tabletitle</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">tbody</span>&gt;</span><span>
+<span id="line301"></span>        </span><span title="Etiqueta de inicio “a” vista en “table”." class="error">&lt;<span class="start-tag">a</span> <span class="attribute-name">id</span>="<a class="attribute-value">btn-data-user</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">e</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#userdatapanel" class="attribute-value">#userdatapanel</a>" <span class="attribute-name">class</span>="<a class="attribute-value">ui-btn-right1</a>"&gt;</span><span>Tus datos</span><span title="Caracteres distintos de espacio descolocados dentro de una tabla.
+Etiqueta de cierre “a” extraviada." class="error error">&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line302"></span>
+<span id="line303"></span>        </span><span title="Etiqueta de inicio “h3” vista en “table”." class="error">&lt;<span class="start-tag">h3</span>&gt;</span><span></span><span title="Etiqueta de inicio “a” vista en “table”." class="error">&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">style</span>="<a class="attribute-value">font-size: 1.5em;</a>"&gt;</span><span>MI TAXI JJ</span><span title="Caracteres distintos de espacio descolocados dentro de una tabla.
+Etiqueta de cierre “a” extraviada." class="error error">&lt;/<span class="end-tag">a</span>&gt;</span><span></span><span title="Etiqueta de cierre “h3” extraviada." class="error">&lt;/<span class="end-tag">h3</span>&gt;</span><span>
+<span id="line304"></span>
+<span id="line305"></span>        </span><span class="comment">&lt;!--
+<span id="line306"></span>        &lt;a href="#" id="reading"&gt;Leer&lt;/a&gt;
+<span id="line307"></span>        &lt;a href="#" id="saving"&gt;Grabar&lt;/a&gt;
+<span id="line308"></span>        --&gt;</span><span>
+<span id="line309"></span>        </span><span title="Etiqueta de inicio “div” vista en “table”." class="error">&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">agent-call-wrapper</a>"&gt;</span><span>
+<span id="line310"></span>            </span><span title="Etiqueta de inicio “a” vista en “table”." class="error">&lt;<span class="start-tag">a</span> <span class="attribute-name">id</span>="<a class="attribute-value">agent-call</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">e</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#carreraPanel" class="attribute-value">#carreraPanel</a>" <span class="attribute-name">class</span>="<a class="attribute-value">ui-btn-right</a>"&gt;</span><span>Pide tu Taxi</span><span title="Caracteres distintos de espacio descolocados dentro de una tabla.
+Etiqueta de cierre “a” extraviada." class="error error">&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line311"></span>        </span><span title="Etiqueta de cierre “div” extraviada." class="error">&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line312"></span>        </span><span>&lt;/<span class="end-tag">tbody</span>&gt;</span><span>
+<span id="line313"></span>        </span><span>&lt;/<span class="end-tag">table</span>&gt;</span><span>
+<span id="line314"></span>        </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">agent-call2-wrapper</a>"&gt;</span><span>
+<span id="line315"></span>            </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">id</span>="<a class="attribute-value">agent-call2</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">b</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#call-modal" class="attribute-value">#call-modal</a>" <span class="attribute-name">class</span>="<a class="attribute-value">ui-btn-right</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>" &gt;</span><span>Ver taxi</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line316"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>   
+<span id="line317"></span>        </span><span>&lt;<span class="start-tag">form</span> <span class="attribute-name">action</span>="<a href="view-source:http://app.mitaxijj.com.ec/es/api/call" class="attribute-value">http://app.mitaxijj.com.ec/es/api/call</a>" <span class="attribute-name">method</span>="<a class="attribute-value">post</a>" <span class="attribute-name">accept-charset</span>="<a class="attribute-value">iso-8859-1</a>" <span class="attribute-name">id</span>="<a class="attribute-value">call-form</a>" <span class="attribute-name">class</span>="<a class="attribute-value"></a>"&gt;</span><span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">id</span>="<a class="attribute-value">lat</a>" <span class="attribute-name">name</span>="<a class="attribute-value">lat</a>" <span class="attribute-name">type</span>="<a class="attribute-value">hidden</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>"&gt;</span><span>
+<span id="line318"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">id</span>="<a class="attribute-value">lng</a>" <span class="attribute-name">name</span>="<a class="attribute-value">lng</a>" <span class="attribute-name">type</span>="<a class="attribute-value">hidden</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>"&gt;</span><span>
+<span id="line319"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">id</span>="<a class="attribute-value">zone</a>" <span class="attribute-name">name</span>="<a class="attribute-value">zone</a>" <span class="attribute-name">type</span>="<a class="attribute-value">hidden</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>"&gt;</span><span>
+<span id="line320"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">id</span>="<a class="attribute-value">city</a>" <span class="attribute-name">name</span>="<a class="attribute-value">city</a>" <span class="attribute-name">type</span>="<a class="attribute-value">hidden</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>"&gt;</span><span>
+<span id="line321"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">id</span>="<a class="attribute-value">state_c</a>" <span class="attribute-name">name</span>="<a class="attribute-value">state_c</a>" <span class="attribute-name">type</span>="<a class="attribute-value">hidden</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>"&gt;</span><span>
+<span id="line322"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">id</span>="<a class="attribute-value">country</a>" <span class="attribute-name">name</span>="<a class="attribute-value">country</a>" <span class="attribute-name">type</span>="<a class="attribute-value">hidden</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>"&gt;</span><span>
+<span id="line323"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">fieldcontain</a>"&gt;</span><span>
+<span id="line324"></span>            </span><span>&lt;<span class="start-tag">table</span> <span class="attribute-name">border</span>=<a class="attribute-value">0</a> <span class="attribute-name">width</span>="<a class="attribute-value">100%</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">tbody</span>&gt;</span><span>
+<span id="line325"></span>                </span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line326"></span>                </span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>
+<span id="line327"></span>                    </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">d</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">home</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>" <span class="attribute-name">id</span>="<a class="attribute-value">btn-localizame</a>"&gt;</span><span>Localizame</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line328"></span>                </span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line329"></span>                </span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>
+<span id="line330"></span>                    </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">d</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">refresh</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>" <span class="attribute-name">id</span>="<a class="attribute-value">btn-real-time</a>"&gt;</span><span>Recargar</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line331"></span>                </span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>                
+<span id="line332"></span>                 </span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>
+<span id="line333"></span>                    </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">c</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">info</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">id</span>="<a class="attribute-value">ayuda</a>"&gt;</span><span>Ayuda</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line334"></span>                </span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line335"></span>                </span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line336"></span>            </span><span>&lt;/<span class="end-tag">tbody</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">table</span>&gt;</span><span>
+<span id="line337"></span>                </span><span>&lt;<span class="start-tag">table</span> <span class="attribute-name">border</span>=<a class="attribute-value">0</a> <span class="attribute-name">width</span>="<a class="attribute-value">100%</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">tbody</span>&gt;</span><span>
+<span id="line338"></span>                </span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line339"></span>                </span><span>&lt;<span class="start-tag">td</span> &gt;</span><span>
+<span id="line340"></span>                    Tu ubicación:                    </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">address</a>" <span class="attribute-name">id</span>="<a class="attribute-value">address</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">text</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-clear-btn</span>="<a class="attribute-value">true</a>" <span class="attribute-name">onkeydown</span>="<a class="attribute-value">return validarEnter(event)</a>"&gt;</span><span>
+<span id="line341"></span>                </span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;<span class="start-tag">td</span> &gt;</span><span>
+<span id="line342"></span>                    </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">id</span>='<a class="attribute-value">btn-address-search</a>'  <span class="attribute-name">align</span>="<a class="attribute-value">left</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">search</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">e</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>"&gt;</span><span>Buscar</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line343"></span>                </span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line344"></span>                </span><span>&lt;<span class="start-tag">td</span> &gt;</span><span>
+<span id="line345"></span>                    </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">b</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">back</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">delete</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">id</span>="<a class="attribute-value">close-page</a>"&gt;</span><span>Salir</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line346"></span>                    </span><span class="comment">&lt;!--a href="#" data-role="button" data-mini="true" data-theme="a" data-inline="true" id="btn-close"&gt;Salir&lt;/a--&gt;</span><span>
+<span id="line347"></span>                    </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es" class="attribute-value"></a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">id</span>="<a class="attribute-value">show-login</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">back</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display: none;</a>"&gt;</span><span>Show page "login"</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line348"></span>                </span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line349"></span>                </span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line350"></span>                </span><span>&lt;/<span class="end-tag">tbody</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">table</span>&gt;</span><span>
+<span id="line351"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>          
+<span id="line352"></span>         </span><span>&lt;/<span class="end-tag">form</span>&gt;</span><span>   
+<span id="line353"></span>
+<span id="line354"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line355"></span>    
+<span id="line356"></span>   </span><span class="comment">&lt;!-- Mapa --&gt;</span><span>
+<span id="line357"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">content</a>" <span class="attribute-name">class</span>="<a class="attribute-value">padding-0</a>"&gt;</span><span>
+<span id="line358"></span>         </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">map_canvas</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line359"></span>   </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line360"></span>
+<span id="line361"></span>   </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">panel</a>" <span class="attribute-name">id</span>="<a class="attribute-value">carreraPanel</a>" <span class="attribute-name">data-display</span>="<a class="attribute-value">push</a>" <span class="attribute-name">data-position</span>="<a class="attribute-value">right</a>" <span title="Atributo duplicado." class="attribute-name error">data-display</span>="<a class="attribute-value">overlay</a>" <span class="attribute-name">data-position-fixed</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-swipe-close</span>="<a class="attribute-value">false</a>" <span class="attribute-name">data-dismissible</span>="<a class="attribute-value">false</a>"&gt;</span><span>
+<span id="line362"></span>      </span><span class="comment">&lt;!--a href="#" data-rel="close" data-icon="delete" id="closePanel" data-mini="true"&gt;Cerrar ventana&lt;/a--&gt;</span><span>
+<span id="line363"></span>    </span><span>&lt;<span class="start-tag">h2</span> <span class="attribute-name">id</span>="<a class="attribute-value">nombreCarrera</a>" <span class="attribute-name">style</span>="<a class="attribute-value">margin-top:-5px;margin-bottom:5px</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line364"></span>    </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">dirCarrera</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line365"></span>    </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">detalleCarrera</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line366"></span>    </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">enviarTiempo</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line367"></span>    </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">aceptarCarrera</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line368"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">cerrarventana</a>"&gt;</span><span>
+<span id="line369"></span>        </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">close</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">delete</a>" <span class="attribute-name">id</span>="<a class="attribute-value">closemapmenu1</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>"&gt;</span><span><span class="entity"><span>&amp;</span>#8678;</span> Cerrar ventana</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line370"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line371"></span>    </span><span>&lt;<span class="start-tag">div</span> &gt;</span><span>
+<span id="line372"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">confirm-wrapper</a>"&gt;</span><span>
+<span id="line373"></span>        </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">header</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">e</a>" <span class="attribute-name">align</span>="<a class="attribute-value">center</a>"&gt;</span><span>
+<span id="line374"></span>            </span><span>&lt;<span class="start-tag">b</span> <span class="attribute-name">style</span>="<a class="attribute-value">font-size: 1.4em;</a>"&gt;</span><span>Confirma tus datos</span><span>&lt;/<span class="end-tag">b</span>&gt;</span><span>  </span><span class="comment">&lt;!--Confirma tus datos--&gt;</span><span>
+<span id="line375"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /header --&gt;</span><span>
+<span id="line376"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">content</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">d</a>"&gt;</span><span>    
+<span id="line377"></span>                </span><span class="comment">&lt;!--&lt;p&gt;Tus datos:&lt;/p&gt;--&gt;</span><span>    
+<span id="line378"></span>                  </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">call-name</a>" <span class="attribute-name">id</span>="<a class="attribute-value">call-name</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value"><span class="entity"><span>&amp;</span>#9786;</span> Ingresa tu nombre</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">text</a>"&gt;</span><span>
+<span id="line379"></span>
+<span id="line380"></span>             </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">ui-grid-a</a>"&gt;</span><span>
+<span id="line381"></span>                </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">ui-block-a</a>"&gt;</span><span>
+<span id="line382"></span>                </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">call-phone</a>" <span class="attribute-name">id</span>="<a class="attribute-value">call-phone</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value"><span class="entity"><span>&amp;</span>#9990;</span> Teléfono</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">number</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>"&gt;</span><span>        
+<span id="line383"></span>                </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line384"></span>                </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">ui-block-b</a>"&gt;</span><span>
+<span id="line385"></span>                </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">address-numero</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">id</span>="<a class="attribute-value">address-numero</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value"># casa</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">text</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>"&gt;</span><span>       
+<span id="line386"></span>                </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line387"></span>             </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line388"></span>
+<span id="line389"></span>                </span><span class="comment">&lt;!--Confirma tu dirección:--&gt;</span><span>
+<span id="line390"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">address-alterna</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">id</span>="<a class="attribute-value">address-alterna</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value">Calle principal</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">text</a>"&gt;</span><span> </span><span class="comment">&lt;!-- Dirección alterna --&gt;</span><span>
+<span id="line391"></span>            </span><span class="comment">&lt;!--input name="address-calle" data-mini="true" id="address-calle" value="" type="text"--&gt;</span><span>
+<span id="line392"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">address-calle2</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">id</span>="<a class="attribute-value">address-calle2</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">text</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value">Calle secundaria</a>"&gt;</span><span>
+<span id="line393"></span>                
+<span id="line394"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">address-reference</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">id</span>="<a class="attribute-value">address-reference</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value">Referencia, p.ej. 'casa amarilla'</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">text</a>"&gt;</span><span>
+<span id="line395"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">user-mail</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">id</span>="<a class="attribute-value">user-mail</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value">@ Ingresa tu e-mail (opcional)</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">email</a>"&gt;</span><span>
+<span id="line396"></span>
+<span id="line397"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">radioservice</a>" &gt;</span><span>
+<span id="line398"></span>            </span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">for</span>="<a class="attribute-value">slider-1</a>"&gt;</span><span>Radio de búsqueda (m):</span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span>
+<span id="line399"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">range</a>" <span class="attribute-name">name</span>="<a class="attribute-value">slider-1</a>" <span class="attribute-name">id</span>="<a class="attribute-value">slider-1</a>" <span class="attribute-name">value</span>="<a class="attribute-value">2500</a>" <span class="attribute-name">min</span>="<a class="attribute-value">1500</a>" <span class="attribute-name">max</span>="<a class="attribute-value">5000</a>" <span class="attribute-name">step</span>="<a class="attribute-value">100</a>"<span>/</span>&gt;</span><span>
+<span id="line400"></span>            </span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">for</span>="<a class="attribute-value">payway</a>"&gt;</span><span>Indica tu forma de pago:</span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span>
+<span id="line401"></span>            </span><span>&lt;<span class="start-tag">select</span> <span class="attribute-name">id</span>="<a class="attribute-value">payway</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">slider</a>"&gt;</span><span>
+<span id="line402"></span>              </span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">E</a>"&gt;</span><span>EFECTIVO</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line403"></span>              </span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">V</a>"&gt;</span><span>VOUCHER</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line404"></span>            </span><span>&lt;/<span class="end-tag">select</span>&gt;</span><span>
+<span id="line405"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line406"></span>
+<span id="line407"></span>                </span><span class="comment">&lt;!--&lt;div id="confirmation-msg"&gt;Seguro desea llamar un servicio a esta ubicación?&lt;/div&gt;--&gt;</span><span> 
+<span id="line408"></span>            </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">errorwaiting</a>"&gt;</span><span> </span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>    
+<span id="line409"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">waiting-msg</a>"&gt;</span><span>
+<span id="line410"></span>            </span><span>&lt;<span class="start-tag">h1</span>&gt;</span><span>Buscando unidades...</span><span>&lt;/<span class="end-tag">h1</span>&gt;</span><span>
+<span id="line411"></span>            </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">range</a>" <span class="attribute-name">name</span>="<a class="attribute-value">slider-mini</a>" <span class="attribute-name">id</span>="<a class="attribute-value">slider-mini</a>" <span class="attribute-name">value</span>="<a class="attribute-value">0</a>" <span class="attribute-name">min</span>="<a class="attribute-value">0</a>" <span class="attribute-name">max</span>="<a class="attribute-value">100</a>" <span class="attribute-name">data-highlight</span>="<a class="attribute-value">true</a>" <span>/</span>&gt;</span><span>
+<span id="line412"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line413"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /content --&gt;</span><span>
+<span id="line414"></span>
+<span id="line415"></span>        </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line416"></span>            </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">check</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">b</a>" <span class="attribute-name">id</span>="<a class="attribute-value">call-confirmation</a>"&gt;</span><span>Solicitar taxi</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line417"></span>            </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">id</span>="<a class="attribute-value">call-cancelation</a>"&gt;</span><span>Cancelar</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line418"></span>        </span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>    
+<span id="line419"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line420"></span>    
+<span id="line421"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">agent-wrapper</a>"&gt;</span><span>
+<span id="line422"></span>        </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">header</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">e</a>"&gt;</span><span>
+<span id="line423"></span>            </span><span>&lt;<span class="start-tag">h1</span>&gt;</span><span>Asignado!</span><span>&lt;/<span class="end-tag">h1</span>&gt;</span><span>
+<span id="line424"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /header --&gt;</span><span>
+<span id="line425"></span>    
+<span id="line426"></span>        </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">content</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">d</a>"&gt;</span><span>    
+<span id="line427"></span>            </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>Codigo de confirmación: </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">confirmation-code</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line428"></span>            </span><span>&lt;<span class="start-tag">table</span>&gt;</span><span>
+<span id="line429"></span>                </span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line430"></span>                </span><span>&lt;<span class="start-tag">td</span>&gt;</span><span></span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">agent-photo</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line431"></span>                </span><span>&lt;<span class="start-tag">td</span>&gt;</span><span></span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">agent-name</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line432"></span>                </span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line433"></span>            </span><span>&lt;/<span class="end-tag">table</span>&gt;</span><span>
+<span id="line434"></span>            </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line435"></span>            Placa: </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">agent-placa</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>,<span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line436"></span>            Unidad: </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">agent-unidad</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line437"></span>            </span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line438"></span>            </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line439"></span>            <span class="entity"><span>&amp;</span>#9990;</span> </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">agent-phone</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line440"></span>            </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">id</span>='<a class="attribute-value">btn-phone</a>'  <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">grid</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">a</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>"&gt;</span><span>Llamar</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line441"></span>            </span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line442"></span>            </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">waitingtaxi</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line443"></span>                
+<span id="line444"></span>            </span><span class="comment">&lt;!--&lt;p&gt;&lt;div data-role="collapsible"&gt;
+<span id="line445"></span>                    &lt;h2&gt;Comparte esta información en:&lt;/h2&gt;
+<span id="line446"></span>                    &lt;ul data-role="listview" data-split-icon="gear" data-split-theme="d"&gt;
+<span id="line447"></span>                        &lt;li&gt;&lt;span id="share-twitter"&gt;&lt;/span&gt;&lt;/li&gt;
+<span id="line448"></span>                        &lt;li&gt;&lt;span id="share-facebook"&gt;&lt;/span&gt;&lt;/li&gt;
+<span id="line449"></span>                    &lt;/ul&gt;
+<span id="line450"></span>                &lt;/div&gt;
+<span id="line451"></span>            &lt;/p&gt;--&gt;</span><span>
+<span id="line452"></span>            
+<span id="line453"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /content --&gt;</span><span>
+<span id="line454"></span>                
+<span id="line455"></span>        </span><span>&lt;<span class="start-tag">table</span>&gt;</span><span>
+<span id="line456"></span>        </span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line457"></span>            </span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>
+<span id="line458"></span>            </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">id</span>="<a class="attribute-value">show-taxi</a>"&gt;</span><span>Ver taxi</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>   </span><span class="comment">&lt;!--ver taxi--&gt;</span><span>
+<span id="line459"></span>            </span><span class="comment">&lt;!--a
+ href="#" data-role="button" data-mini="true" data-inline="true" 
+data-rel="back" id="query-cancelation"&gt;Cancelar servicio&lt;/a--&gt;</span><span>
+<span id="line460"></span>            </span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>
+<span id="line461"></span>                </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">c</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#messagespanel" class="attribute-value">#messagespanel</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">grid</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>" <span class="attribute-name">id</span>="<a class="attribute-value">messages</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>"&gt;</span><span>MSJ</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line462"></span>            </span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span></span><span>&lt;<span class="start-tag">td</span>&gt;</span><span>
+<span id="line463"></span>                </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">b</a>" <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">check</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>" <span class="attribute-name">id</span>="<a class="attribute-value">arribotaxi</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">onClick</span>="<a class="attribute-value">serviceaccept()</a>"&gt;</span><span>Arribo</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line464"></span>            </span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line465"></span>        </span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line466"></span>        </span><span>&lt;/<span class="end-tag">table</span>&gt;</span><span>
+<span id="line467"></span>        </span><span>&lt;<span class="start-tag">form</span>&gt;</span><span>
+<span id="line468"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">class</span>="<a class="attribute-value">ui-field-contain</a>"  <span class="attribute-name">id</span>="<a class="attribute-value">query-cancelation</a>"&gt;</span><span>
+<span id="line469"></span>        &nbsp;&nbsp;&nbsp;&nbsp;</span><span>&lt;<span class="start-tag">select</span> <span class="attribute-name">name</span>="<a class="attribute-value">taxi-cancel</a>" <span class="attribute-name">id</span>="<a class="attribute-value">taxi-cancel</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">a</a>"&gt;</span><span>
+<span id="line470"></span>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>&lt;<span class="start-tag">option</span>&gt;</span><span>Cancelar...</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line471"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        </span><span>&lt;<span class="start-tag">optgroup</span> <span class="attribute-name">label</span>="<a class="attribute-value">Por qué deseas cancelar?</a>"&gt;</span><span>
+<span id="line472"></span>                    </span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">1</a>"&gt;</span><span>La unidad no contesta</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>                        
+<span id="line473"></span>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">2</a>"&gt;</span><span>La unidad tarda mucho</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line474"></span>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">3</a>"&gt;</span><span>Ya no necesito el servicio</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line475"></span>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">4</a>"&gt;</span><span>Estaba solo probando</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line476"></span>        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">5</a>"&gt;</span><span>No estoy seguro que el taxista llegue</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line477"></span>        &nbsp;&nbsp;&nbsp;&nbsp;</span><span>&lt;/<span class="end-tag">select</span>&gt;</span><span>
+<span id="line478"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line479"></span>        </span><span>&lt;/<span class="end-tag">form</span>&gt;</span><span>
+<span id="line480"></span>        </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">requestcancel</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line481"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line482"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /page popup --&gt;</span><span>
+<span id="line483"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line484"></span>
+<span id="line485"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">panel</a>" <span class="attribute-name">id</span>="<a class="attribute-value">messagespanel</a>"&gt;</span><span> 
+<span id="line486"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">cerrarventana</a>"&gt;</span><span>
+<span id="line487"></span>        </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">close</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">delete</a>" <span class="attribute-name">id</span>="<a class="attribute-value">closemapmenu1</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>"&gt;</span><span><span class="entity"><span>&amp;</span>#8678;</span> Cerrar ventana</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line488"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line489"></span>    </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#carreraPanel" class="attribute-value">#carreraPanel</a>" <span class="attribute-name">class</span>="<a class="attribute-value">ui-btn</a>" <span class="attribute-name">text-align</span>="<a class="attribute-value">left</a>"&gt;</span><span>Regresar a info carrera</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line490"></span>    </span><span>&lt;<span class="start-tag">h2</span>&gt;</span><span>Mensajes</span><span>&lt;/<span class="end-tag">h2</span>&gt;</span><span>
+<span id="line491"></span>    </span><span>&lt;<span class="start-tag">form</span>&gt;</span><span>
+<span id="line492"></span>    </span><span>&lt;<span class="start-tag">select</span> <span class="attribute-name">id</span>="<a class="attribute-value">messg2taxi</a>"&gt;</span><span>
+<span id="line493"></span>        </span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">choose-one</a>" <span class="attribute-name">data-placeholder</span>="<a class="attribute-value">true</a>"&gt;</span><span>Mensaje...</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line494"></span>        </span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">SFO</a>"&gt;</span><span>Llámeme por favor</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line495"></span>        </span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">LAX</a>"&gt;</span><span>Confirme que está en camino</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line496"></span>        </span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">LAX</a>"&gt;</span><span>Tarda más en llegar?</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line497"></span>        </span><span>&lt;<span class="start-tag">option</span> <span class="attribute-name">value</span>="<a class="attribute-value">LAX</a>"&gt;</span><span>Ok</span><span>&lt;/<span class="end-tag">option</span>&gt;</span><span>
+<span id="line498"></span>    </span><span>&lt;/<span class="end-tag">select</span>&gt;</span><span>
+<span id="line499"></span>    </span><span>&lt;/<span class="end-tag">form</span>&gt;</span><span>
+<span id="line500"></span>    </span><span>&lt;<span class="start-tag">p</span> <span class="attribute-name">id</span>="<a class="attribute-value">chatarea</a>" &gt;</span><span></span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span> 
+<span id="line501"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line502"></span>
+<span id="line503"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">panel</a>" <span class="attribute-name">id</span>="<a class="attribute-value">userdatapanel</a>"&gt;</span><span> 
+<span id="line504"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">cerrarventana1</a>"&gt;</span><span>
+<span id="line505"></span>        </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">close</a>" <span class="attribute-name">data-icon</span>="<a class="attribute-value">delete</a>" <span class="attribute-name">id</span>="<a class="attribute-value">closemapmenu1</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">text-align</span>="<a class="attribute-value">right</a>"&gt;</span><span>Cerrar ventana <span class="entity"><span>&amp;</span>#8678;</span></span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line506"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">user-wrapper</a>"&gt;</span><span>
+<span id="line507"></span>        </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">header</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">e</a>"&gt;</span><span>
+<span id="line508"></span>            </span><span>&lt;<span class="start-tag">h1</span>&gt;</span><span>Datos personales:</span><span>&lt;/<span class="end-tag">h1</span>&gt;</span><span>
+<span id="line509"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /header --&gt;</span><span>
+<span id="line510"></span>    
+<span id="line511"></span>        </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">content</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">d</a>"&gt;</span><span> 
+<span id="line512"></span>           Su nombre:
+<span id="line513"></span>           </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">user-name</a>" <span class="attribute-name">id</span>="<a class="attribute-value">user-name</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value">Su nombre</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">text</a>"&gt;</span><span>
+<span id="line514"></span>           Su teléfono:
+<span id="line515"></span>           </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">user-phone</a>" <span class="attribute-name">id</span>="<a class="attribute-value">user-phone</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value">Su teléfono:</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">number</a>"&gt;</span><span>
+<span id="line516"></span>           E-mail:
+<span id="line517"></span>           </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">user-email</a>" <span class="attribute-name">id</span>="<a class="attribute-value">user-email</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value">E-mail</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">email</a>"&gt;</span><span>
+<span id="line518"></span>
+<span id="line519"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">i-agree-wrapper</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">fieldcontain</a>"&gt;</span><span>
+<span id="line520"></span>                </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">id</span>="<a class="attribute-value">show-tyc</a>"   <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#tyc-modal" class="attribute-value">#tyc-modal</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>" &gt;</span><span>De acuerdo a los términos</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line521"></span>                </span><span>&lt;<span class="start-tag">fieldset</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">controlgroup</a>"&gt;</span><span>
+<span id="line522"></span>                    </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">ck-i-agree</a>" <span class="attribute-name">id</span>="<a class="attribute-value">ck-i-agree</a>"  <span>/</span>&gt;</span><span>
+<span id="line523"></span>                    </span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">for</span>="<a class="attribute-value">ck-i-agree</a>"&gt;</span><span>Estoy de acuerdo</span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span>
+<span id="line524"></span>                </span><span>&lt;/<span class="end-tag">fieldset</span>&gt;</span><span>
+<span id="line525"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line526"></span>
+<span id="line527"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /content --&gt;</span><span>
+<span id="line528"></span>        </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line529"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">btn_user_save-wrapper</a>"&gt;</span><span>
+<span id="line530"></span>                </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">id</span>="<a class="attribute-value">btn_user_save</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">e</a>"&gt;</span><span>Grabar datos</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line531"></span>                </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">close</a>" <span class="attribute-name">id</span>="<a class="attribute-value">btn_user_back</a>"&gt;</span><span>Regresar</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line532"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line533"></span>        </span><span title="Falta elemento “p” en el ámbito pero se ha visto una etiqueta de cierre “p”." class="error">&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line534"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span> 
+<span id="line535"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line536"></span>
+<span id="line537"></span>
+<span id="line538"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-theme</span>="<a class="attribute-value">b</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">none</a>" <span class="attribute-name">data-position</span>="<a class="attribute-value">fixed</a>" <span class="attribute-name">align</span>="<a class="attribute-value">center</a>"&gt;</span><span>
+<span id="line539"></span>      </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://www.geocommerce.com.ec/" class="attribute-value">http://www.geocommerce.com.ec</a>" <span class="attribute-name">target</span>="<a class="attribute-value">_blank</a>" <span class="attribute-name">id</span>="<a class="attribute-value">linkgeo</a>" <span class="attribute-name">title</span>="<a class="attribute-value">Diseño realizado por GeoCommerce Ecuador</a>"&gt;</span><span>GeoCommerce</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line540"></span>      </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">banner-label</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line541"></span>      </span><span>&lt;<span class="start-tag">span</span> <span class="attribute-name">id</span>="<a class="attribute-value">msg-marquee</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">span</span>&gt;</span><span>
+<span id="line542"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line543"></span>  
+<span id="line544"></span>    </span><span title="Guiones consecutivos no terminaron un comentario. “--” no se permite dentro de un comentario, pero por ejemplo “- -” sí." class="error comment">&lt;!--
+<span id="line545"></span>    &lt;div data-theme="e" data-role="footer" data-position="fixed" align="center"&gt;
+<span id="line546"></span>        &lt;!-- Publicidad &gt;
+<span id="line547"></span>        &lt;div align="right" id="banner-wrapper" style=""&gt;
+<span id="line548"></span>            &lt;label id="banner-label"&gt;&lt;/label&gt;
+<span id="line549"></span>            &lt;a href="#" 
+id='btn_banner_close'  align="right" data-role="button" 
+data-icon="delete" data-iconpos="notext" data-theme="a" 
+data-inline="true"&gt;Cerrar publicidad&lt;/a&gt;               
+<span id="line550"></span>        &lt;/div&gt;
+<span id="line551"></span>    
+<span id="line552"></span>        &lt;a href="http://www.geocommerce.com.ec" &gt;GeoCommerce&lt;/a&gt;
+<span id="line553"></span>    &lt;/div&gt;
+<span id="line554"></span>    --&gt;</span><span>
+<span id="line555"></span>
+<span id="line556"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">sound_</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>    
+<span id="line557"></span>    </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#user-modal" class="attribute-value">#user-modal</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">id</span>="<a class="attribute-value">show-user</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display: none;</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>"&gt;</span><span>Show user</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line558"></span>    </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#call-modal" class="attribute-value">#call-modal</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">id</span>="<a class="attribute-value">show-call</a>" <span class="attribute-name">style</span>="<a class="attribute-value">display: none;</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>"&gt;</span><span>Show call</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line559"></span>    
+<span id="line560"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line561"></span>
+<span id="line562"></span>
+<span id="line563"></span>
+<span id="line564"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">page</a>" <span class="attribute-name">id</span>="<a class="attribute-value">user-modal</a>" &gt;</span><span>
+<span id="line565"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">user-wrapper</a>"&gt;</span><span>
+<span id="line566"></span>        </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">header</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">e</a>"&gt;</span><span>
+<span id="line567"></span>            </span><span>&lt;<span class="start-tag">h1</span>&gt;</span><span>Datos personales:</span><span>&lt;/<span class="end-tag">h1</span>&gt;</span><span>
+<span id="line568"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /header --&gt;</span><span>
+<span id="line569"></span>    
+<span id="line570"></span>        </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">content</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">d</a>"&gt;</span><span>    
+<span id="line571"></span>            </span><span>&lt;<span class="start-tag">table</span> <span class="attribute-name">border</span>=<a class="attribute-value">0</a> <span class="attribute-name">width</span>="<a class="attribute-value">100%</a>"&gt;</span><span></span><span>&lt;<span class="start-tag">tbody</span>&gt;</span><span>
+<span id="line572"></span>                </span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line573"></span>                </span><span>&lt;<span class="start-tag">td</span> &gt;</span><span></span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">for</span>="<a class="attribute-value">user-name</a>"&gt;</span><span>Su nombre:</span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line574"></span>                </span><span>&lt;<span class="start-tag">td</span> &gt;</span><span></span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">user-name</a>" <span class="attribute-name">id</span>="<a class="attribute-value">user-name</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value">Su nombre</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">text</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line575"></span>                </span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line576"></span>                </span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line577"></span>                </span><span>&lt;<span class="start-tag">td</span> &gt;</span><span></span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">for</span>="<a class="attribute-value">user-phone</a>"&gt;</span><span>Su teléfono:</span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line578"></span>                </span><span>&lt;<span class="start-tag">td</span> &gt;</span><span></span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">user-phone</a>" <span class="attribute-name">id</span>="<a class="attribute-value">user-phone</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value">Su teléfono:</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">tel</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line579"></span>                </span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line580"></span>                </span><span>&lt;<span class="start-tag">tr</span>&gt;</span><span>
+<span id="line581"></span>                </span><span>&lt;<span class="start-tag">td</span> &gt;</span><span></span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">for</span>="<a class="attribute-value">user-email</a>"&gt;</span><span>E-mail:</span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line582"></span>                </span><span>&lt;<span class="start-tag">td</span> &gt;</span><span></span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">name</span>="<a class="attribute-value">user-email</a>" <span class="attribute-name">id</span>="<a class="attribute-value">user-email</a>" <span class="attribute-name">placeholder</span>="<a class="attribute-value">E-mail</a>" <span class="attribute-name">value</span>="<a class="attribute-value"></a>" <span class="attribute-name">type</span>="<a class="attribute-value">email</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">td</span>&gt;</span><span>
+<span id="line583"></span>                </span><span>&lt;/<span class="end-tag">tr</span>&gt;</span><span>
+<span id="line584"></span>                </span><span>&lt;/<span class="end-tag">tbody</span>&gt;</span><span>
+<span id="line585"></span>            </span><span>&lt;/<span class="end-tag">table</span>&gt;</span><span>
+<span id="line586"></span>
+<span id="line587"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">i-agree-wrapper</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">fieldcontain</a>"&gt;</span><span>
+<span id="line588"></span>                </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">id</span>="<a class="attribute-value">show-tyc</a>"   <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#tyc-modal" class="attribute-value">#tyc-modal</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">dialog</a>" <span class="attribute-name">data-transition</span>="<a class="attribute-value">pop</a>" &gt;</span><span>De acuerdo a los términos</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line589"></span>                </span><span>&lt;<span class="start-tag">fieldset</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">controlgroup</a>"&gt;</span><span>
+<span id="line590"></span>                    </span><span>&lt;<span class="start-tag">input</span> <span class="attribute-name">type</span>="<a class="attribute-value">checkbox</a>" <span class="attribute-name">name</span>="<a class="attribute-value">ck-i-agree</a>" <span class="attribute-name">id</span>="<a class="attribute-value">ck-i-agree</a>"  <span>/</span>&gt;</span><span>
+<span id="line591"></span>                    </span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">for</span>="<a class="attribute-value">ck-i-agree</a>"&gt;</span><span>Estoy de acuerdo</span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span>
+<span id="line592"></span>                </span><span>&lt;/<span class="end-tag">fieldset</span>&gt;</span><span>
+<span id="line593"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line594"></span>
+<span id="line595"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /content --&gt;</span><span>
+<span id="line596"></span>        </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line597"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">id</span>="<a class="attribute-value">btn_user_save-wrapper</a>"&gt;</span><span>
+<span id="line598"></span>                </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">back</a>" <span class="attribute-name">id</span>="<a class="attribute-value">btn_user_back</a>"&gt;</span><span>Regresar</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line599"></span>                </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">back</a>" <span class="attribute-name">id</span>="<a class="attribute-value">btn_user_save</a>"&gt;</span><span>Grabar datos</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line600"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line601"></span>        </span><span title="Falta elemento “p” en el ámbito pero se ha visto una etiqueta de cierre “p”." class="error">&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line602"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line603"></span>
+<span id="line604"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /page popup --&gt;</span><span>
+<span id="line605"></span>
+<span id="line606"></span></span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">page</a>" <span class="attribute-name">id</span>="<a class="attribute-value">tyc-modal</a>" &gt;</span><span>
+<span id="line607"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">header</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">e</a>"&gt;</span><span>
+<span id="line608"></span>        </span><span>&lt;<span class="start-tag">h1</span>&gt;</span><span>Terminos y condiciones</span><span>&lt;/<span class="end-tag">h1</span>&gt;</span><span>
+<span id="line609"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /header --&gt;</span><span>
+<span id="line610"></span>    
+<span id="line611"></span>    </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">data-role</span>="<a class="attribute-value">content</a>" <span class="attribute-name">data-theme</span>="<a class="attribute-value">d</a>"&gt;</span><span>    
+<span id="line612"></span>        </span><span>&lt;<span class="start-tag">div</span>&gt;</span><span>
+<span id="line613"></span>            </span><span>&lt;<span class="start-tag">label</span> <span class="attribute-name">id</span>='<a class="attribute-value">tyc-msj</a>'&gt;</span><span></span><span>&lt;/<span class="end-tag">label</span>&gt;</span><span>
+<span id="line614"></span>        </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line615"></span>    </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /content --&gt;</span><span>
+<span id="line616"></span>        
+<span id="line617"></span>    </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line618"></span>        </span><span>&lt;<span class="start-tag">a</span> <span class="attribute-name">href</span>="<a href="view-source:http://app.mitaxijj.com.ec/es#" class="attribute-value">#</a>" <span class="attribute-name">data-role</span>="<a class="attribute-value">button</a>" <span class="attribute-name">data-mini</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-inline</span>="<a class="attribute-value">true</a>" <span class="attribute-name">data-rel</span>="<a class="attribute-value">back</a>" <span class="attribute-name">id</span>="<a class="attribute-value">btn_tyc_exit</a>"&gt;</span><span>Regresar</span><span>&lt;/<span class="end-tag">a</span>&gt;</span><span>
+<span id="line619"></span>    </span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line620"></span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span></span><span class="comment">&lt;!-- /page popup --&gt;</span><span>
+<span id="line621"></span>
+<span id="line622"></span></span><span class="comment">&lt;!-- 
+<span id="line623"></span>&lt;audio id="yes" src="assets/audio/yes.mp3" preload="auto"&gt;&lt;/audio&gt;
+<span id="line624"></span>&lt;audio id="not" src="assets/audio/not.mp3" preload="auto"&gt;&lt;/audio&gt;
+<span id="line625"></span>&lt;audio id="ring" src="assets/audio/ring.mp3" preload="auto"&gt;&lt;/audio&gt;
+<span id="line626"></span> --&gt;</span><span>
+<span id="line627"></span></span><span>&lt;<span class="start-tag">audio</span> <span class="attribute-name">id</span>="<a class="attribute-value">pito</a>" <span class="attribute-name">src</span>="<a href="view-source:http://app.mitaxijj.com.ec/assets/audio/pito.mp3" class="attribute-value">http://app.mitaxijj.com.ec/assets/audio/pito.mp3</a>" <span class="attribute-name">preload</span>="<a class="attribute-value">auto</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">audio</span>&gt;</span><span>
+<span id="line628"></span></span><span>&lt;<span class="start-tag">audio</span> <span class="attribute-name">id</span>="<a class="attribute-value">yes</a>" <span class="attribute-name">src</span>="<a href="view-source:http://app.mitaxijj.com.ec/assets/audio/yes.mp3" class="attribute-value">http://app.mitaxijj.com.ec/assets/audio/yes.mp3</a>" <span class="attribute-name">preload</span>="<a class="attribute-value">auto</a>"&gt;</span><span></span><span>&lt;/<span class="end-tag">audio</span>&gt;</span><span>
+<span id="line629"></span>
+<span id="line630"></span>
+<span id="line631"></span>
+<span id="line632"></span></span><span>&lt;/<span class="end-tag">body</span>&gt;</span><span>
+<span id="line633"></span></span><span>&lt;/<span class="end-tag">html</span>&gt;</span><span>
+<span id="line634"></span>
+<span id="line635"></span>        </span><span class="comment">&lt;!-- &lt;div&gt;
+<span id="line636"></span>            &lt;a href="#popupPanel" 
+data-rel="popup" data-transition="slide" data-position-to="window" 
+data-role="button"&gt;Open panel&lt;/a&gt;
+<span id="line637"></span>            &lt;div data-role="popup" 
+id="popupPanel" data-corners="false" data-theme="none" 
+data-shadow="false" data-tolerance="0,0"&gt;
+<span id="line638"></span>            &lt;button data-theme="a" data-icon="back" data-mini="true"&gt;Back&lt;/button&gt;
+<span id="line639"></span>            &lt;button data-theme="a" data-icon="grid" data-mini="true"&gt;Menu&lt;/button&gt;
+<span id="line640"></span>            &lt;button data-theme="a" data-icon="search" data-mini="true"&gt;Search&lt;/button&gt;
+<span id="line641"></span>            &lt;/div&gt;
+<span id="line642"></span>
+<span id="line643"></span>        &lt;/div&gt;
+<span id="line644"></span>
+<span id="line645"></span>        #popupPanel-popup {
+<span id="line646"></span>    right: 0 !important;
+<span id="line647"></span>    left: auto !important;
+<span id="line648"></span>}
+<span id="line649"></span>#popupPanel {
+<span id="line650"></span>    width: 200px;
+<span id="line651"></span>    border: 1px solid #000;
+<span id="line652"></span>    border-right: none;
+<span id="line653"></span>    background: rgba(0,0,0,.5);
+<span id="line654"></span>    margin: -1px 0;
+<span id="line655"></span>}
+<span id="line656"></span>#popupPanel .ui-btn {
+<span id="line657"></span>    margin: 2em 15px;
+<span id="line658"></span>}
+<span id="line659"></span> --&gt;</span><span></span></pre><menu id="actions" type="context"><menuitem accesskey="x" label="Ir a la línea…" id="goToLine"></menuitem><menuitem type="checkbox" label="Ajustar líneas largas" id="wrapLongLines"></menuitem><menuitem checked="true" type="checkbox" label="Resaltar sintaxis" id="highlightSyntax"></menuitem></menu></body></html>
