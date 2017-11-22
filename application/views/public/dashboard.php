@@ -17,7 +17,7 @@
     <script src="<?=base_url()?>assets/js/jquery.mobile-1.3.2.min.js"></script>
     <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
     <script type="text/javascript"
-  		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6DTzndSIlbMN0Vo-jjoQU7lah6YnfOHw" >
+  		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD--LbyOwfiFO9dAB2XQyYcEEo46WKoEBg" >
  	</script>
   	<script>
  		var lang = '<?=current_lang()?>';
@@ -86,8 +86,8 @@
     </div>
     
    <!-- Mapa -->
-    <div data-role="content" class="padding-0">
-         <div id="map_canvas"></div>
+    <div data-role="content" class="padding-0" >
+         <div id="map_canvas" ></div>
    </div>
   
 
