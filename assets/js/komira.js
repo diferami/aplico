@@ -840,7 +840,7 @@ function init(){
             message_interval        = response.message_interval;
             //console.log(server2 +"assets/images/" + response.app_icon);
             $('#app_name').html(response.app_name);
-            $('#app_icon').attr('src', server3 +"assets/images/" + response.app_icon) ;
+            $('#app_icon').attr('src', base_url() +"assets/images/" + response.app_icon) ;
             $('#copyright').html(response.copyright);
             $('#copyright2').html(response.copyright);
 
