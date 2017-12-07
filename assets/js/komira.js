@@ -828,7 +828,7 @@ function get_address(lat, lng) {
 function init(){
     $.ajax({
         type : "GET",
-        url : server3 + 'api/agent_init',        
+        url : server + '/' + lang  + 'api/agent_init',        
         dataType : "json",
         data : {cachehora : (new Date()).getTime()}
     }).done(function(response){
@@ -839,8 +839,7 @@ function init(){
             updatelocation_interval = response.updatelocation_interval;
             message_interval        = response.message_interval;
             //console.log(server2 +"assets/images/" + response.app_icon);
-            //$('#app_name').html(response.app_name);
-            $('#app_name').html( base_url() +"assets/images/" + response.app_icon);
+            $('#app_name').html(response.app_name);
             $('#app_icon').attr('src', base_url() +"assets/images/" + response.app_icon) ;
             $('#copyright').html(response.copyright);
             $('#copyright2').html(response.copyright);
