@@ -631,7 +631,7 @@ function updateLocation(){
         },
         
     }).done(function(response){
-            $('#position-state').attr('src',base_url +'assets/images/green_dot.png');
+            $('#position-state').attr('src',base_url() +'assets/images/green_dot.png');
             $('#current-position').parent().css('background-color', '#FFFFFF');
             
             if(response.state != 'ok'){
@@ -739,13 +739,13 @@ function cargarMapa() {
     agentMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat, lng ),
             map: map,
-            icon : base_url + 'assets/images/taxi.png'
+            icon : base_url() + 'assets/images/taxi.png'
     });
     /*Creamos un marcador USUARIO*/   
     userMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat_user, lng_user ),
             map: map,
-            icon : base_url +'assets/images/male.png'
+            icon : base_url() +'assets/images/male.png'
     });
 
     var rendererOptions = {
