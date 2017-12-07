@@ -2,6 +2,7 @@ var http = location.protocol;
 var slashes = http.concat("//");
 var server = slashes.concat(window.location.hostname)+ '/es/';
 var server2 = slashes.concat(window.location.hostname)+ '/';
+var server3 = slashes.concat(window.location.hostname)+ '/apps/es/';
 var lang = '';
 //console.log(server);
 var lat = lng = deslat = destlng = 0;
@@ -276,7 +277,7 @@ function login(id, key){
 
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + 'api/login',        
+        url : server3 + 'api/login',        
         dataType : "json",
         data : {
             username : id,
@@ -321,7 +322,7 @@ function relogin(id, key){
     
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + 'api/relogin',        
+        url : server3 + 'api/relogin',        
         dataType : "json",
         data : {
             username : id,
@@ -827,7 +828,7 @@ function get_address(lat, lng) {
 function init(){
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + 'api/agent_init',        
+        url : server3 + 'api/agent_init',        
         dataType : "json",
         data : {cachehora : (new Date()).getTime()}
     }).done(function(response){
