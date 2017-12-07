@@ -54,5 +54,12 @@ class Dashboard extends CI_Controller {
 
 	}
 
+	public function agente(){
+		// load language file
+		$this->lang->load('dashboard');
+		$this->load->view('public/agent');
+
+	}
+
 	
 }

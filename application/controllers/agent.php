@@ -11,7 +11,9 @@ class Agent extends CI_Controller {
 		parent::__construct();
 		
 		if(!$this->agent = $this->session->userdata('agente')){
-			redirect($user->lang.'/login'); 
+			//redirect($user->lang.'/login'); 
+			$this->lang->load('dashboard');
+			$this->load->view('public/agent');
 		}
 		
 		// load language file
@@ -27,7 +29,7 @@ class Agent extends CI_Controller {
 	
 	private function load_view(){
 		
-		$this->load->view('private/agent', array(
+		$this->load->view('public/agent', array(
 					'title' => $this->title,
 					'error' => $this->error
 					));

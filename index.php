@@ -61,9 +61,8 @@ if (defined('ENVIRONMENT'))
 			date_default_timezone_set('America/Guayaquil');
 		break;
 		case 'mototaps':
-			error_reporting(E_ALL);
+			error_reporting(0);
 			date_default_timezone_set('America/Bogota');
-			ini_set('display_errors', '1');
 		break;
 		case 'buskoo':
 			error_reporting(0);
