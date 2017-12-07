@@ -292,7 +292,7 @@ function login(id, key){
             $("#show-dashboard").trigger('click');
             user = response.data
             $('#agent-name').html(user.nombre);
-            $('#agent-photo').attr('src', server3 +"assets/images/agents/" + user.foto) ;
+            $('#agent-photo').attr('src', base_url() +"assets/images/agents/" + user.foto) ;
             // ojoooo no se puede sacar clearInterval de este lado por que no se reinicia el logueo
             clearInterval(updateLocationDemonId);    
             localizame();
@@ -631,7 +631,7 @@ function updateLocation(){
         },
         
     }).done(function(response){
-            $('#position-state').attr('src',server3 +'assets/images/green_dot.png');
+            $('#position-state').attr('src',base_url +'assets/images/green_dot.png');
             $('#current-position').parent().css('background-color', '#FFFFFF');
             
             if(response.state != 'ok'){
@@ -739,13 +739,13 @@ function cargarMapa() {
     agentMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat, lng ),
             map: map,
-            icon : server3 + 'assets/images/taxi.png'
+            icon : base_url + 'assets/images/taxi.png'
     });
     /*Creamos un marcador USUARIO*/   
     userMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat_user, lng_user ),
             map: map,
-            icon : server3 +'assets/images/male.png'
+            icon : base_url +'assets/images/male.png'
     });
 
     var rendererOptions = {
