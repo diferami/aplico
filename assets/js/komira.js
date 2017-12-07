@@ -3,6 +3,7 @@ var slashes = http.concat("//");
 var server = slashes.concat(window.location.hostname)+ '/es/';
 var server2 = slashes.concat(window.location.hostname)+ '/';
 var server3 = slashes.concat(window.location.hostname)+ '/apps/es/';
+var server4 = slashes.concat(window.location.hostname)+ '/apps/';
 var lang = '';
 //console.log(server);
 var lat = lng = deslat = destlng = 0;
@@ -292,7 +293,7 @@ function login(id, key){
             $("#show-dashboard").trigger('click');
             user = response.data
             //$('#agent-name').html(user.nombre);
-            $('#agent-name').html(server3 +"assets/images/agents/" + user.foto);
+            $('#agent-name').html(base_url() +"assets/images/agents/" + user.foto);
             $('#agent-photo').attr('src', base_url() +"assets/images/agents/" + user.foto) ;
             // ojoooo no se puede sacar clearInterval de este lado por que no se reinicia el logueo
             clearInterval(updateLocationDemonId);    
