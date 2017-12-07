@@ -130,7 +130,7 @@ class Agente extends CI_Model {
 		
 		$sql  = " SELECT fecha_sancion ";
 		$sql .= " from agente ";
-		$sql .= " where id=$id ";
+		echo $sql .= " where id=$id ";
 		$fecha_sancion = $this->db->query($sql)->result();
 		if(!count($fecha_sancion))
 			return null;
