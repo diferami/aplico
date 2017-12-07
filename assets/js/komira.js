@@ -292,9 +292,8 @@ function login(id, key){
             page_state  = 'dashboard';
             $("#show-dashboard").trigger('click');
             user = response.data
-            //$('#agent-name').html(user.nombre);
-            $('#agent-name').html(base_url() +"assets/images/agents/" + user.foto);
-            $('#agent-photo').attr('src', base_url() +"assets/images/agents/" + user.foto) ;
+            $('#agent-name').html(user.nombre);
+            $('#agent-photo').attr('src', server4 +"assets/images/agents/" + user.foto) ;
             // ojoooo no se puede sacar clearInterval de este lado por que no se reinicia el logueo
             clearInterval(updateLocationDemonId);    
             localizame();
@@ -633,7 +632,7 @@ function updateLocation(){
         },
         
     }).done(function(response){
-            $('#position-state').attr('src',base_url() +'assets/images/green_dot.png');
+            $('#position-state').attr('src',server4 +'assets/images/green_dot.png');
             $('#current-position').parent().css('background-color', '#FFFFFF');
             
             if(response.state != 'ok'){
@@ -741,13 +740,13 @@ function cargarMapa() {
     agentMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat, lng ),
             map: map,
-            icon : base_url() + 'assets/images/taxi.png'
+            icon : server4 + 'assets/images/taxi.png'
     });
     /*Creamos un marcador USUARIO*/   
     userMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat_user, lng_user ),
             map: map,
-            icon : base_url() +'assets/images/male.png'
+            icon : server4 +'assets/images/male.png'
     });
 
     var rendererOptions = {
@@ -842,7 +841,7 @@ function init(){
             message_interval        = response.message_interval;
             //console.log(server2 +"assets/images/" + response.app_icon);
             $('#app_name').html(response.app_name);
-            $('#app_icon').attr('src', base_url() +"assets/images/" + response.app_icon) ;
+            $('#app_icon').attr('src', server4 +"assets/images/" + response.app_icon) ;
             $('#copyright').html(response.copyright);
             $('#copyright2').html(response.copyright);
 
