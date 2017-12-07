@@ -209,7 +209,7 @@ function getSelectCust(){
 
     $.ajax({
             type : "GET",
-            url : server + '/' + lang + 'agent/get_all_cust' ,        
+            url : server3 + 'agent/get_all_cust' ,        
             dataType : "json",
             data : {}
     }).done(function(response){
@@ -228,7 +228,7 @@ function getMessage(){
     
     $.ajax({
             type : "GET",
-            url : server + '/' + lang +  'agent/get_message' ,        
+            url : server3 +  'agent/get_message' ,        
             dataType : "json",
             data : {}
     }).done(function(response){
@@ -345,7 +345,7 @@ function relogin(id, key){
 function arrival_confirmation(){
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + 'agent/arrival_confirmation',        
+        url : server3 + 'agent/arrival_confirmation',        
         dataType : "json",
         data : {
             request_id : request_id,
@@ -361,7 +361,7 @@ function arrival_confirmation(){
 function verifyService(){
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + 'agent/get_service',        
+        url : server3 + 'agent/get_service',        
         dataType : "json",
         data : {
             demonId : verifyServiceDemonId,
@@ -459,7 +459,7 @@ function switchToFree(){
 
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + 'agent/switch_to_free',        
+        url : server3 + 'agent/switch_to_free',        
         dataType : "json",
         data : {
             hms1: scode,
@@ -493,7 +493,7 @@ function cancel_service(){
      
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + 'agent/cancel_service',        
+        url : server3 + 'agent/cancel_service',        
         dataType : "json",
         data : {
             hms1: scode,
@@ -512,7 +512,7 @@ function service_delivered(){
        cust = $('#select-cust').val();
     $.ajax({
         type : "GET",
-        url : server + '/' + lang +  'agent/delivered_service',        
+        url : server3 +  'agent/delivered_service',        
         dataType : "json",
         data : {
             request_id  : request_id,
@@ -555,7 +555,7 @@ function confirm_service(){
     
     $.ajax({
         type : "GET",
-        url : server + '/' + lang +  'agent/confirm',        
+        url : server3 +  'agent/confirm',        
         dataType : "json",
         data : {
             request_id : request_id,
@@ -591,7 +591,7 @@ function confirm_service(){
 function verifyServiceState(){
     $.ajax({
         type : "GET",
-        url : server + '/' + lang +  'agent/verify_service_status',        
+        url : server3 +  'agent/verify_service_status',        
         dataType : "json",
         data : {
             queryId : request_id,
@@ -622,7 +622,7 @@ function updateLocation(){
     
     $.ajax({
         type : "GET",
-        url : server + '/' + lang +  'agent/update_location',        
+        url : server3 +  'agent/update_location',        
         dataType : "json",
         timeout : 5000,
         data : {
@@ -659,7 +659,7 @@ function help_me(){
     
     $.ajax({
         type : "GET",
-        url : server + '/' + lang +  'agent/help_me',        
+        url : server3 +  'agent/help_me',        
         dataType : "json",
         timeout : 5000,
         data : {
@@ -684,7 +684,7 @@ function get_sos(){
     
     $.ajax({
         type : "GET",
-        url : server + '/' + lang  + 'agent/get_sos',        
+        url : server3 + 'agent/get_sos',        
         dataType : "json",
         timeout : 5000,
         data : {
