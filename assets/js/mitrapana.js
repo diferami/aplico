@@ -1,6 +1,7 @@
 var http = location.protocol;
 var slashes = http.concat("//");
-var server = slashes.concat(window.location.hostname);
+var server = slashes.concat(window.location.hostname)+ '/apps';
+var server4 = slashes.concat(window.location.hostname)+ '/apps';
 
 var styles = [
                   {
@@ -283,7 +284,7 @@ function getbanner(){
         }
     }).done(function(response){
         if(response.state == 'ok'){
-            var style = "background-image: url("+ server + "/assets/images/banner/"+ response.result.imagen+"); height: 50px; width: 320px; border: 0px solid black";
+            var style = "background-image: url("+ server4 + "/assets/images/banner/"+ response.result.imagen+"); height: 50px; width: 320px; border: 0px solid black";
             document.getElementById("banner-wrapper").setAttribute("style",style);
            // $('#banner-label').html(response.result.descripcion);
             $('#banner-wrapper').show();
@@ -432,7 +433,7 @@ function setTaxiIcon(lat, lng){
         taxiMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat, lng ),
             map: map,
-            icon : server +'/assets/images/taxi.png'
+            icon : server4 +'/assets/images/taxi.png'
         });
         
         tracerRoute(lat, lng, latitud, longitud);
@@ -701,7 +702,7 @@ function cargarMapa() {
         map: map, /* Lo vinculamos a nuestro mapa */
         animation: google.maps.Animation.DROP, 
         draggable: true,
-        icon : server + '/assets/images/male.png'
+        icon : server4 + '/assets/images/male.png'
     });
 
    
