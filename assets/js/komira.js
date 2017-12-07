@@ -291,7 +291,8 @@ function login(id, key){
             page_state  = 'dashboard';
             $("#show-dashboard").trigger('click');
             user = response.data
-            $('#agent-name').html(user.nombre);
+            //$('#agent-name').html(user.nombre);
+            $('#agent-name').html(base_url() +"assets/images/agents/" + user.foto);
             $('#agent-photo').attr('src', base_url() +"assets/images/agents/" + user.foto) ;
             // ojoooo no se puede sacar clearInterval de este lado por que no se reinicia el logueo
             clearInterval(updateLocationDemonId);    
