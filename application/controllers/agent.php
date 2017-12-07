@@ -109,7 +109,7 @@ class Agent extends CI_Controller {
 	
 	function get_service(){
 		
-		$id = $this->input->get_post('id');	
+		$id = $this->input->get_post('id');
 		$id = $id ? $id : $this->agent->id;
 		$lat = $this->input->get_post('lat');
 		$lng = $this->input->get_post('lng');

@@ -89,7 +89,7 @@ class Agente extends CI_Model {
 		$sql .= " where fecha_solicitud > ( CURRENT_TIMESTAMP( ) - INTERVAL 60 SECOND ) ";
 		$sql .= " and estado = 'P' AND idagente IS NULL ";
 		$sql .= " HAVING distancia < ".ci_config('distance_call');
-		echo $sql .= " ORDER BY distancia LIMIT 1 ";
+		$sql .= " ORDER BY distancia LIMIT 1 ";
 		
 		$sol = $this->db->query($sql)->result();
 		
