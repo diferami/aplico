@@ -828,7 +828,7 @@ function get_address(lat, lng) {
 function init(){
     $.ajax({
         type : "GET",
-        url : server + '/' + lang  + 'api/agent_init',        
+        url : server3 + 'api/agent_init',        
         dataType : "json",
         data : {cachehora : (new Date()).getTime()}
     }).done(function(response){
