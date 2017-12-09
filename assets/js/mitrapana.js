@@ -133,12 +133,13 @@ $(document).ready(function() {
     
      
     $('#show-taxi').click(function(e){
+        $("[data-role=panel]").panel("close");
         if(directionsDisplay != null) { 
             directionsDisplay.setMap(null);
             directionsDisplay = null; 
         }
-        $('#agent-call-wrapper').hide();
-        $('#agent-call2-wrapper').show();
+        //$('#agent-call-wrapper').hide();
+        //$('#agent-call2-wrapper').show();
         
         clearInterval(taxiLocationDemonId);
         //getTaxiLocation();
