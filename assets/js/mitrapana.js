@@ -141,8 +141,9 @@ $(document).ready(function() {
         $('#agent-call2-wrapper').show();
         
         clearInterval(taxiLocationDemonId);
-        getTaxiLocation();
+        //getTaxiLocation();
         taxiLocationDemonId = setInterval(getTaxiLocation, verification_interval);
+
     });
 
     $('#btn-address-search').click(function(e){
