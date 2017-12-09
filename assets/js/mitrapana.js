@@ -143,7 +143,6 @@ $(document).ready(function() {
         clearInterval(taxiLocationDemonId);
         getTaxiLocation();
         taxiLocationDemonId = setInterval(getTaxiLocation, verification_interval);
-        getTaxiLocation
     });
 
     $('#btn-address-search').click(function(e){
