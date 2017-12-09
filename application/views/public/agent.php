@@ -18,7 +18,6 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6DTzndSIlbMN0Vo-jjoQU7lah6YnfOHw" >
 </script>
 
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
 <script src="<?=base_url()?>assets/js/komira.js"></script>
 
 
