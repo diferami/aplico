@@ -183,7 +183,7 @@ $(document).ready(function() {
         //6 else
         //7    $("#show-call").trigger('click');
 
-        $("#show-call").trigger('click');//borrarla cuando se descomente
+        //$("#show-call").trigger('click');//borrarla cuando se descomente
     });
 
 
