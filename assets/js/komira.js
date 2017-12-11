@@ -36,6 +36,7 @@ var id_watch = null;
 var pres = 0;
 var watchgps = 0;
 var gps = 0;
+var force_gps = 0;
 
 var styles = [
                   {
@@ -768,19 +769,7 @@ function coords(position) {
         watchgps = 0;
     }
 
-    gps = 0;
-    if (lat && vel<=0) { 
-        $('#gps-state').attr('src', server + "/assets/images/gps/gps_cellular.png");
-        gps = 1;
-        }
-    else if (lat && vel>0) { 
-        $('#gps-state').attr('src', server + "/assets/images/gps/gps_satellite.png");
-        gps = 1;
-        }
-    else if (!lat || lat=="0" || lat== "NULL") {
-        gps = 0;
-        alert("Error: conecte el GPS");
-    } 
+     
 }
 
 
