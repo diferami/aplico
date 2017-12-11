@@ -111,6 +111,7 @@
             </td>
         </tr>
         </tbody></table>
+         <span id="latlong" style="font-size: .5em;text-shadow: none;font-style: oblique;color: blue;">Esperando posición...</span> 
     </div>
     
  

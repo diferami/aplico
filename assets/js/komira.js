@@ -31,6 +31,12 @@ var placa = null;
 var unidad = null;
 var fecha_sos = null;
 var page_state  = 'do-login';
+
+var id_watch = null;
+var pres = 0;
+var watchgps = 0;
+var gps = 0;
+
 var styles = [
                   {
                         "featureType": "poi",
@@ -105,6 +111,10 @@ $(document).ready(function() {
         clearInterval(localizationDemonId);
         clearInterval(verifyServiceDemonId);
         clearInterval(updateLocationDemonId);
+        
+        window.navigator.geolocation.clearWatch(id_watch);
+        id_watch = null; 
+
         username = '';
         password = '';
         $('#password').val('');
@@ -647,7 +657,12 @@ function updateLocation(){
          $('#current-position').css('color', 'red');
          $('#current-position').val('Latitud: ' + lat + ' Longitud: ' + lng);
          //-------------------------------login(username, password);
-         relogin(username, password);
+        
+        window.navigator.geolocation.clearWatch( id_watch );
+        id_watch = null;
+        watchgps = 0;
+        
+        relogin(username, password);
       }); 
      //verificar mensaje de ayuda de otros agentes.
      //get_sos();
@@ -707,7 +722,7 @@ function get_sos(){
 
 }
 
-function localizame() {
+function localizame1() {
     if (navigator.geolocation) { 
         //navigator.geolocation.getCurrentPosition(coords, errores);
         navigator.geolocation.getCurrentPosition(coords, errores,{'enableHighAccuracy':true,'timeout':20000,'maximumAge':0});
@@ -716,10 +731,59 @@ function localizame() {
     }
 }
 
-function coords(position) {
+
+function coords1(position) {
     lat = position.coords.latitude;
     lng = position.coords.longitude;
 }
+
+function localizame() {
+    setTimeout(function(){
+        updateLocation();
+        },16000);
+
+    if(!id_watch && force_gps == 1) {
+        id_watch = navigator.geolocation.watchPosition(coords, onErrorGPS, {'enableHighAccuracy':true,'timeout':8000,'maximumAge':0});
+        }
+    if(!id_watch && force_gps != 1) {
+        navigator.geolocation.getCurrentPosition(coords, errores,{'enableHighAccuracy':true,'timeout':8000,'maximumAge':0});
+    }
+
+}
+
+function coords(position) {
+    //if (watchgps == 0) return;
+    lat = position.coords.latitude;
+    lng = position.coords.longitude;
+    pres = position.coords.accuracy; // presición
+    //vel = position.coords.speed;  //velocidad m/s
+    //vel = vel*3.6;
+    //dir = position.coords.heading; // azimuth
+    
+    $('#latlong').html(lat+", "+lng+" | pres: "+Math.round(pres) +" m");
+
+    if(pres < 80 && id_watch > 0){
+        window.navigator.geolocation.clearWatch( id_watch );
+        id_watch = null;
+        watchgps = 0;
+    }
+
+    gps = 0;
+    if (lat && vel<=0) { 
+        $('#gps-state').attr('src', server + "/assets/images/gps/gps_cellular.png");
+        gps = 1;
+        }
+    else if (lat && vel>0) { 
+        $('#gps-state').attr('src', server + "/assets/images/gps/gps_satellite.png");
+        gps = 1;
+        }
+    else if (!lat || lat=="0" || lat== "NULL") {
+        gps = 0;
+        alert("Error: conecte el GPS");
+    } 
+}
+
+
 
 function cargarMapa() {
     var directionsDisplay = new google.maps.DirectionsRenderer();

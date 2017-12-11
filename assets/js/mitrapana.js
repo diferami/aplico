@@ -75,6 +75,9 @@ $(document).ready(function() {
  
     //ocultar publidad
     $('#banner-wrapper').hide();
+    //bototn de datos usuario
+    $("#btn-data-user").closest('.ui-btn').hide();
+
     if ((average=='WEB') || (uuid=='') || (uuid=='undefined') || (uuid=='indefinido')){
         $("#btn-data-user").closest('.ui-btn').hide();
         //$("#btn-localizame1").closest('.ui-btn').show();
@@ -183,7 +186,7 @@ $(document).ready(function() {
         //6 else
         //7    $("#show-call").trigger('click');
 
-        //$("#show-call").trigger('click');//borrarla cuando se descomente
+        $("#show-call").trigger('click');//borrarla cuando se descomente
     });
 
 
