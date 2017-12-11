@@ -37,6 +37,8 @@ var pres = 0;
 var watchgps = 0;
 var gps = 0;
 var force_gps = 0;
+var vel = 0;
+var dir = 0;
 
 var styles = [
                   {
@@ -305,6 +307,7 @@ function login(id, key){
             user = response.data
             $('#agent-name').html(user.nombre);
             $('#agent-photo').attr('src', server4 +"assets/images/agents/" + user.foto) ;
+            $('#gps-state').attr('src', server4 + "assets/images/gps_disconnected.png") ;
             // ojoooo no se puede sacar clearInterval de este lado por que no se reinicia el logueo
             clearInterval(updateLocationDemonId);    
             localizame();
@@ -757,9 +760,9 @@ function coords(position) {
     lat = position.coords.latitude;
     lng = position.coords.longitude;
     pres = position.coords.accuracy; // presición
-    //vel = position.coords.speed;  //velocidad m/s
-    //vel = vel*3.6;
-    //dir = position.coords.heading; // azimuth
+    vel = position.coords.speed;  //velocidad m/s
+    vel = vel*3.6;
+    dir = position.coords.heading; // azimuth
     
     $('#latlong').html(lat+", "+lng+" | pres: "+Math.round(pres) +" m");
 
@@ -767,6 +770,20 @@ function coords(position) {
         window.navigator.geolocation.clearWatch( id_watch );
         id_watch = null;
         watchgps = 0;
+    }
+
+    gps = 0;
+    if (lat && vel<=0) { 
+        $('#gps-state').attr('src', server4 + "assets/images/gps_cellular.png");
+        gps = 1;
+        }
+    else if (lat && vel>0) { 
+        $('#gps-state').attr('src', server4 + "assets/images/gps_satellite.png");
+        gps = 1;
+        }
+    else if (!lat || lat=="0" || lat== "NULL") {
+        gps = 0;
+        alert("Error: conecte el GPS");
     }
 
      
