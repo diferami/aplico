@@ -745,7 +745,7 @@ function localizame() {
     setTimeout(function(){
         updateLocation();
         },16000);
-
+    force_gps = 1;
     if(!id_watch && force_gps == 1) {
         id_watch = navigator.geolocation.watchPosition(coords, onErrorGPS, {'enableHighAccuracy':true,'timeout':8000,'maximumAge':0});
         }
