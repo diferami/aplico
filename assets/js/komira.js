@@ -39,6 +39,7 @@ var gps = 0;
 var force_gps = 0;
 var vel = 0;
 var dir = 0;
+var gpspres = '';
 
 var styles = [
                   {
@@ -742,6 +743,7 @@ function coords1(position) {
 }
 
 function localizame() {
+    /*
     setTimeout(function(){
         updateLocation();
         },16000);
@@ -752,6 +754,42 @@ function localizame() {
     if(!id_watch && force_gps != 1) {
         navigator.geolocation.getCurrentPosition(coords, errores,{'enableHighAccuracy':true,'timeout':8000,'maximumAge':0});
     }
+    */
+
+
+    setTimeout(function(){
+        updateLocation();
+    },16000);
+
+    if (watchgps == 0 && !id_watch){
+        id_watch = window.navigator.geolocation.watchPosition(coords, errores, {maximumAge: 0, timeout: 20000, enableHighAccuracy:true});
+        gpspres = 'H';
+        watchgps = 1;
+    }
+    
+    if (watchgps == 1) {
+        setTimeout(function(){
+            if(id_watch) {
+                window.navigator.geolocation.clearWatch( id_watch );
+                id_watch = null;
+            }
+        },8000);
+    }
+
+    if (watchgps == 2 || watchgps == 3) {
+        if(id_watch) {
+            window.navigator.geolocation.clearWatch( id_watch );
+            id_watch = null;
+        }
+            id_watch = window.navigator.geolocation.getCurrentPosition(coords, errores,{'enableHighAccuracy':true,'timeout':8000,'maximumAge':0});
+            //setTimeout(function(){ window.navigator.geolocation.getCurrentPosition(coords, errores,{'enableHighAccuracy':true,'timeout':10000,'maximumAge':0});},2500);
+        gpspres = 'L';
+    }
+
+    watchgps = watchgps + 1;
+    if (watchgps > 3) watchgps = 0;
+
+
 
 }
 
