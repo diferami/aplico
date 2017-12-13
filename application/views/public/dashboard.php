@@ -49,8 +49,9 @@
 
 <div data-role="page" id="page1"  >
     <div data-theme="e" data-role="header">
+    	<!-- 
     	<a id="btn-data-user" data-role="button" data-theme="a" href="#user-modal" data-rel="dialog" data-transition="pop" data-icon="grid" ><?=lang('dashboard.your_data')?></a>
-    	 <!-- 
+    	 
     	<a id="btn-localizame1" data-role="button"  data-theme="a" style="display: none;" ><?=lang('dashboard.localizame')?></a>
     	-->
         <h3><?= $this->config->item('app_name') ?></h3>
@@ -92,17 +93,19 @@
   
 
     <div data-theme="e" data-role="footer" data-position="fixed" align="center">
-    	<!-- Publicidad -->
+    	<!-- Publicidad 
     	<div align="right" id="banner-wrapper" style="">
     		<label id="banner-label"></label>
 			<a href="#" id='btn_banner_close'  align="right" data-role="button" data-icon="delete" data-iconpos="notext" data-theme="a" data-inline="true"><?=lang('dashboard.exit_banner')?></a>				
 		</div>
-	
+		-->
 	   	<a href="<?= $this->config->item('app_link') ?>" ><?= $this->config->item('copyright') ?></a>
     </div>
 
     <div id="sound_"></div>    
+    <!--
     <a href="#user-modal" data-role="button" id="show-user" style="display: none;" data-rel="dialog" data-transition="pop">Show user</a>
+    -->
     <a href="#call-modal" data-role="button" id="show-call" style="display: none;" data-rel="dialog" data-transition="pop">Show call</a>
     
 </div>
@@ -187,11 +190,12 @@
 	</div>
 </div><!-- /page popup -->
 
+<!-- 
 <div data-role="page" id="user-modal" >
 	<div id="user-wrapper">
 		<div data-role="header" data-theme="e">
 			<h1><?=lang('dashboard.personal_data')?></h1>
-		</div><!-- /header -->
+		</div>
 	
 		<div data-role="content" data-theme="d">	
 			<table border=0 width="100%"><tbody>
@@ -218,7 +222,7 @@
 				</fieldset>
 			</div>
 
-    	</div><!-- /content -->
+    	</div>
 		<p>
 			<div id="btn_user_save-wrapper">
 				<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="btn_user_back"><?=lang('dashboard.back')?></a>
@@ -227,24 +231,26 @@
 		</p>
 	</div>
 
-</div><!-- /page popup -->
+</div>
+
 
 <div data-role="page" id="tyc-modal" >
 	<div data-role="header" data-theme="e">
 		<h1><?=lang('dashboard.tyc_msj')?></h1>
-	</div><!-- /header -->
+	</div>
 	
 	<div data-role="content" data-theme="d">	
 		<div>
 			<label id='tyc-msj'></label>
 		</div>
-   	</div><!-- /content -->
+   	</div>
 		
 	<p>
 		<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="btn_tyc_exit"><?=lang('dashboard.back')?></a>
 	</p>
-</div><!-- /page popup -->
+</div>
 
+-->
 
 
 <!-- 
@@ -259,29 +265,3 @@
 
 </body>
 </html>
-
-    	<!-- <div>
-    		<a href="#popupPanel" data-rel="popup" data-transition="slide" data-position-to="window" data-role="button">Open panel</a>
-			<div data-role="popup" id="popupPanel" data-corners="false" data-theme="none" data-shadow="false" data-tolerance="0,0">
-		    <button data-theme="a" data-icon="back" data-mini="true">Back</button>
-		    <button data-theme="a" data-icon="grid" data-mini="true">Menu</button>
-		    <button data-theme="a" data-icon="search" data-mini="true">Search</button>
-			</div>
-
-    	</div>
-
-    	#popupPanel-popup {
-    right: 0 !important;
-    left: auto !important;
-}
-#popupPanel {
-    width: 200px;
-    border: 1px solid #000;
-    border-right: none;
-    background: rgba(0,0,0,.5);
-    margin: -1px 0;
-}
-#popupPanel .ui-btn {
-    margin: 2em 15px;
-}
- -->

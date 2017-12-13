@@ -358,7 +358,7 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
  //Custom config
-$config['app_path'] = 'https://www.mototaps.com/apps/'; 
+$config['app_path'] = 'https://mototaps.com/apps/'; 
 $config['app_name'] = 'MotoTaps';
 $config['app_country'] = 'Colombia';
 $config['copyright'] = 'by GPTechnologies';

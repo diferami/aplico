@@ -74,7 +74,7 @@ $(document).ready(function() {
     });
  
     //ocultar publidad
-    $('#banner-wrapper').hide();
+    //$('#banner-wrapper').hide();
     //bototn de datos usuario
     $("#btn-data-user").closest('.ui-btn').hide();
 
@@ -155,13 +155,14 @@ $(document).ready(function() {
         address_search();
     });
 
+    /*
     $('#btn_user_save').click(function(e){
         e.preventDefault();
         $('#i-agree-wrapper').hide();
         $("#user-modal").dialog('close');
         save_user_app();
     });
-
+    
     $('#btn_banner_close').click(function(e){
         e.preventDefault();
         $('#banner-wrapper').hide();
@@ -175,6 +176,7 @@ $(document).ready(function() {
             $('#btn_user_save-wrapper').hide();
     });
 
+*/
     $('#agent-call').click(function(e){
         $('#call-name').val($('#user-name').val());
         $('#call-phone').val($('#user-phone').val());
@@ -277,7 +279,7 @@ function validarEnter(e) {
     } 
 }
 
-
+/*
 function getbanner(){
     $.ajax({
         type : "GET",
@@ -332,6 +334,7 @@ function getUserApp(){
     }
 }
 
+
 function getTyC(){
    $.ajax({
         type : "GET",
@@ -375,6 +378,7 @@ function save_user_app(){
     });
     
 }
+*/
 
 function cancel_service(){
         page_state  = 'dashboard';       
