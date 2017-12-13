@@ -802,7 +802,7 @@ function coords(position) {
     vel = vel*3.6;
     dir = position.coords.heading; // azimuth
     
-    $('#latlong').html(lat+", "+lng+" | pres: "+Math.round(pres) +" m");
+    //$('#latlong').html(lat+", "+lng+" | pres: "+Math.round(pres) +" m");
 
     if(pres < 80 && id_watch > 0){
         window.navigator.geolocation.clearWatch( id_watch );

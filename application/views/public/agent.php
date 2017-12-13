@@ -111,14 +111,16 @@
             </td>
         </tr>
         </tbody></table>
+         <!--
          <span id="latlong" style="font-size: .5em;text-shadow: none;font-style: oblique;color: blue;">Esperando posición...</span> 
-         <img id="gps-state" style="width: 30px;" src=""></p>
+         -->
     </div>
     
  
     <div data-role="article">
         
         <div data-role="section">
+            <img id="gps-state" style="width: 30px;" src="">
             <input name="current-position" id="current-position" placeholder="" value="" type="text" readonly> 
             <span id="verificacion-cod"></span>
             <br>
