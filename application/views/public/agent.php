@@ -120,7 +120,7 @@
     <div data-role="article">
         
         <div data-role="section">
-            <img id="gps-state" style="width: 30px;" src="">
+            <!--<img id="gps-state" style="width: 30px;" src="">-->
             <input name="current-position" id="current-position" placeholder="" value="" type="text" readonly> 
             <span id="verificacion-cod"></span>
             <br>
