@@ -2,7 +2,7 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-16" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,12 +13,16 @@
 	<link rel="shortcut icon" href="<?=base_url()?>assets/images/iconweb.png">
 
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/app.css" />
-  	<link rel="stylesheet" href="<?=base_url()?>assets/css/jquery.mobile-1.3.2.min.css" />
  
-    <script src="<?=base_url()?>assets/js/jquery-1.10.2.min.js"></script>
-    <script src="<?=base_url()?>assets/js/jquery.mobile-1.3.2.min.js"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+   <link rel="stylesheet" href="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.css" /> 
+   <link rel="stylesheet" href="<?=base_url()?>assets/css/theme-classic.css" />
 
+<script src="<?=base_url()?>assets/js/jqm1.4.5/jquery-1.11.1.min.js"></script>
+<script src="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script type="text/javascript"
+  		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsTEMEPiqxEtq9xlzSE-LsUE7q5DXdX-0" >
+	</script>
   	<script>
  		var lang = '<?=current_lang()?>';
  		var verification_interval = <?=ci_config('verification_interval')?>;
