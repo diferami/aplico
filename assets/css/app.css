@@ -6,30 +6,6 @@
     margin: 0 !important;
 }
 
- #map_canvas > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(2) {
-      height: 0px !important;
-    }
-
-    #map_canvas > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(4) > div > div:nth-child(1) > div:nth-child(4) {
-      height: 0px !important;
-    }
-
-    #map_canvas > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(4) > div > div.gm-style-iw > div > div {
-      background-color: #F9F8F5;
-      margin: 0;
-      border: 2px solid #48b5e9;
-      border-radius: 10px;
-    }
-
-    #map_canvas > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(4) > div > div.gm-style-iw {
-      top: 15px !important;
-      left: 40px !important;
-    }
-
-    #map_canvas > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(4) > div > div:nth-child(3) {
-      opacity: 0 !important;
-    }
-
 
 .padding-0{
 	padding: 0 !important;
