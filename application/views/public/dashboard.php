@@ -136,7 +136,7 @@
 		</div><!-- /content -->
 
 		<p>
-			<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" data-transition="reverse"   id="call-cancelationreverse"><?=lang('dashboard.cancel')?></a>
+			<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" data-transition="reverse"   id="call-cancelationreverse"><?=lang('dashboard.reverse')?></a>
 		    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="check" data-theme="b" id="call-confirmation"><?=lang('dashboard.confirm')?></a>
 		</p>	
 	</div>

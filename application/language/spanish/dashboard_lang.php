@@ -20,6 +20,7 @@ $lang['dashboard.callconfirm.address-reference'] = 'Referencia';
 
 $lang['dashboard.cancel'] = 'Cancelar servicio';
 $lang['dashboard.confirm'] = 'Aceptar';
+$lang['dashboard.reverse'] = 'Atrás';
 $lang['dashboard.cancel_service'] = 'Esta seguro que desea cancelar su servicio de taxi?';
 
 
