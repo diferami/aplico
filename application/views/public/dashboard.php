@@ -20,11 +20,11 @@
 <script src="<?=base_url()?>assets/js/jqm1.4.5/jquery-1.11.1.min.js"></script>
 <script src="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-
-    <script type="text/javascript"
+<script type="text/javascript"
   		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsTEMEPiqxEtq9xlzSE-LsUE7q5DXdX-0" >
- 	</script>
-  	<script>
+</script>
+
+<script>
  		var lang = '<?=current_lang()?>';
  		var verification_interval = <?=ci_config('verification_interval')?>;
  		var app_country = '<?=ci_config('app_country')?>';
@@ -44,9 +44,9 @@
  		var model = '<?=$model?>';
  		var platform = '<?=$platform?>';
  		var version = '<?=$version?>';
- 	</script>
+</script>
  	
- 	<script src="<?=base_url()?>assets/js/mitrapana.js"></script>
+<script src="<?=base_url()?>assets/js/mitrapana.js"></script>
 
 </head>
  
@@ -94,7 +94,10 @@
   
 
     <div data-theme="e" data-role="footer" data-position="fixed" align="center">
-	   	<a href="<?= $this->config->item('app_link') ?>" ><?= $this->config->item('copyright') ?></a>
+	   <!--	
+	   <a href="<?= $this->config->item('app_link') ?>" ><?= $this->config->item('copyright') ?></a>
+	   -->
+	   <?= $this->config->item('copyright') ?>
     </div>
 
     <div id="sound_"></div>    

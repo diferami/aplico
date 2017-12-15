@@ -364,8 +364,8 @@ $config['app_country'] = 'Colombia';
 $config['copyright'] = 'by GPTechnologies';
 $config['app_link'] = 'http://www.mototaps.com'; 
 $config['app_icon'] = 'icon_mototaps.png';
-$config['app_users_download'] = 'mototaps/mototapsUser.apk';
-$config['app_agent_download'] = 'mototaps/mototapsAgent.apk';
+$config['app_users_download'] = 'mototaps/mototaps-user.apk';
+$config['app_agent_download'] = 'mototaps/mototaps-agent.apk';
 
 $config['max_verification_attemps'] = 10;
 $config['verification_interval'] = 15000; //In milliseconds
