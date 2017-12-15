@@ -5,7 +5,7 @@
 <title>Solicitud de Taxis</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-
+<link rel="shortcut icon" href="<?=base_url()?>assets/images/iconweb.png">
 
 <link rel="stylesheet" href="<?=base_url()?>assets/css/jquery.mobile-1.3.2.min.css" />
 <link rel="stylesheet" href="<?=base_url()?>assets/css/appagt.css" /> 

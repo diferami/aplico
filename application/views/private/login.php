@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width" />
   <title><?= $title.' : '.$this->config->item('app_name') ?></title>
   
-  <link rel="shortcut icon" href="<?=base_url()?>assets/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="<?=base_url()?>assets/images/iconweb.png">
 
   <link rel="stylesheet" href="<?=base_url()?>assets/foundation/css/normalize.css" />
   <link rel="stylesheet" href="<?=base_url()?>assets/css/app.css" />
