@@ -738,7 +738,8 @@ function service_agent()
 	
 	function callService()
 	{
-		$this->load->view('private/admin.php',(object)array('output' => '' , 'js_files' => array() , 'css_files' => array() , 'op' => 'show_agent_map', 'url' => '/admin/dashboardCall' ));
+		//$this->load->view('private/admin.php',(object)array('output' => '' , 'js_files' => array() , 'css_files' => array() , 'op' => 'callService', 'url' => '/admin/dashboardCall' ));
+		$this->load->view('private/admin.php',(object)array('output' => '' , 'js_files' => array() , 'css_files' => array() , 'op' => 'show_agent_map', 'url' => '/admin/viewAgent' ));
 	}
 
 	function dashboardCall()
