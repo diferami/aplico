@@ -89,7 +89,7 @@ a:hover
 	}else
 	if($this->userconfig->perfil=='CALL'){ ?>
 
-		<a href='<?php echo site_url('admin/callService') ?>'>Pedir taxi</a> |
+		<!--<a href='<?php echo site_url('admin/callService') ?>'>Pedir taxi</a> |-->
 		 
 		<a href='<?php echo site_url('admin/user_managervehicle')?>'>Dueños de Taxis</a> |
 		<a href='<?php echo site_url('admin/vehicle_management')?>'>Vehiculos</a> |
