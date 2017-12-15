@@ -4,6 +4,9 @@ var server = slashes.concat(window.location.hostname)+ '/es/';
 var server2 = slashes.concat(window.location.hostname)+ '/';
 var server3 = slashes.concat(window.location.hostname)+ '/apps/es/';
 var server4 = slashes.concat(window.location.hostname)+ '/apps/';
+//var server3 = slashes.concat(window.location.hostname)+ '/es/';
+//var server4 = slashes.concat(window.location.hostname)+ '/';
+
 var lang = '';
 //console.log(server);
 var lat = lng = deslat = destlng = 0;

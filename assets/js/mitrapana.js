@@ -2,6 +2,8 @@ var http = location.protocol;
 var slashes = http.concat("//");
 var server = slashes.concat(window.location.hostname)+ '/apps';
 var server4 = slashes.concat(window.location.hostname)+ '/apps';
+//var server = slashes.concat(window.location.hostname);
+//var server4 = slashes.concat(window.location.hostname);
 
 var styles = [
                   {
@@ -49,48 +51,30 @@ window.onpopstate = function(event) {
  
  if (window.history && window.history.pushState) {
     $(window).on('popstate', function() {
+     console.log('-->'+page_state);
       var hashLocation = location.hash;
       var hashSplit = hashLocation.split("#!/");
       var hashName = hashSplit[1];
       
       if (hashName !== '') {
         var hash = window.location.hash;
-
+        console.log(hash);
         if ((hash === '') && (page_state==='call')) {
+            console.log('history.go(1)');
           history.go(1); 
         }
       }
     });
   }
 };
-
-
     
-//window.onload = getUserApp();
 
 $(document).ready(function() {
-    $(this).bind("contextmenu", function(e) {
-        e.preventDefault();
-    });
- 
-    //ocultar publidad
-    //$('#banner-wrapper').hide();
-    //bototn de datos usuario
-    $("#btn-data-user").closest('.ui-btn').hide();
-
-    if ((average=='WEB') || (uuid=='') || (uuid=='undefined') || (uuid=='indefinido')){
-        $("#btn-data-user").closest('.ui-btn').hide();
-        //$("#btn-localizame1").closest('.ui-btn').show();
-    }
+    
    
     $('#waiting-msg, #agent-wrapper, #agent-call2-wrapper').hide();
     
     localizame(); /*Cuando cargue la pÃ¡gina, cargamos nuestra posiciÃ³n*/ 
-
-    if ((average=='PC')){
-        $("#btn-localizame").closest('.ui-btn').hide();
-        //address_search();
-    }
 
     $('#address-calle, #address-numero, #address-alterna').change(function(e){
         var address = trim($('input[name="address-calle"]').val()) +' '+ trim($('input[name="address-numero"]').val()) +' ' + trim($('input[name="address-alterna"]').val());
@@ -116,12 +100,20 @@ $(document).ready(function() {
         
     });
     
-    $('#call-cancelation, #query-cancelation').click(function (e){
+    $('#call-cancelation').click(function (e){
+        e.preventDefault();
+        reset_modal();
+    });
+
+    $('#query-cancelation').click(function (e){
+        e.preventDefault();
         if (confirm(msg_cancel_service))
-        {
+        {   
             cancel_service();
+            $("[data-role=panel]").panel("close");
         }
     });
+
 
     $('#call-confirmation').click(function(e){
        e.preventDefault();
@@ -155,48 +147,13 @@ $(document).ready(function() {
         address_search();
     });
 
-    /*
-    $('#btn_user_save').click(function(e){
-        e.preventDefault();
-        $('#i-agree-wrapper').hide();
-        $("#user-modal").dialog('close');
-        save_user_app();
-    });
-    
-    $('#btn_banner_close').click(function(e){
-        e.preventDefault();
-        $('#banner-wrapper').hide();
-    });
-    
-    $('#ck-i-agree').click(function(e){
-        e.preventDefault();
-        if (this.checked)
-            $('#btn_user_save-wrapper').show();
-        else
-            $('#btn_user_save-wrapper').hide();
-    });
-
-*/
+  
     $('#agent-call').click(function(e){
-        $('#call-name').val($('#user-name').val());
-        $('#call-phone').val($('#user-phone').val());
-        // $('#address-numero').focus();
-         
         clearInterval(taxiLocationDemonId);
-        //4 if (flag_tyc=='N')
-        //5    $("#show-user").trigger('click');
-        //6 else
-        //7    $("#show-call").trigger('click');
-
-        $("#show-call").trigger('click');//borrarla cuando se descomente
+  
+        $("#show-call").trigger('click');
     });
 
-
-   
-    //1 $('#i-agree-wrapper').hide(); 
-    //2 getbanner();
-    //3 getUserApp();
-    
 });
 
 
@@ -279,119 +236,23 @@ function validarEnter(e) {
     } 
 }
 
-/*
-function getbanner(){
-    $.ajax({
-        type : "GET",
-        url : server + '/' + lang + '/api/get_banner',           
-        dataType : "json",
-        data : {
-            cachehora : (new Date()).getTime()
-        }
-    }).done(function(response){
-        if(response.state == 'ok'){
-            var style = "background-image: url("+ server4 + "/assets/images/banner/"+ response.result.imagen+"); height: 50px; width: 320px; border: 0px solid black";
-            document.getElementById("banner-wrapper").setAttribute("style",style);
-           // $('#banner-label').html(response.result.descripcion);
-            $('#banner-wrapper').show();
-        }    
-    });
-}
-
-function getUserApp(){
-   
-    if(uuid!=''){
-       $.ajax({
-            type : "GET",
-            url : server + '/' + lang + '/api/get_user_app',        
-            dataType : "json",
-            data : {
-                uuid        : uuid,
-                model       : model,
-                platform    : platform,
-                version     : version,
-                cachehora   : (new Date()).getTime()
-            }
-        }).done(function(response){
-            if(response.state == 'ok'){
-                $('#user-name').val(response.user.nombre);
-                $('#user-phone').val(response.user.telefono);
-                $('#user-email').val(response.user.email);
-                id_user_app = response.user.id;
-                flag_tyc = response.user.tyc;
-                
-                if(response.user.tyc=='N'){
-                    $('#i-agree-wrapper').show();  
-                    //$('#agent-call-wrapper').hide(); 
-                    $('#btn_user_save-wrapper').hide(); 
-                    //$("#show-user").trigger('click');
-                    getTyC();
-                }
-            }
-        });
-    }else{
-        $("#btn-data-user").closest('.ui-btn').hide();
-    }
-}
-
-
-function getTyC(){
-   $.ajax({
-        type : "GET",
-        url : server + '/' + lang + '/api/get_tyc',        
-        dataType : "json",
-        data : {
-            cachehora : (new Date()).getTime()
-        }
-    }).done(function(response){
-        if(response.state == 'ok'){
-            $('#tyc-msj').html(response.result.terminos);
-         }
-    });
-}
-
-function save_user_app(){
-    $('#call-name').val($('#user-name').val());
-    $('#call-phone').val($('#user-phone').val());
-    //$('#call-address').val($('#address').val()); 
-    $.ajax({
-        type        : "GET",
-        url         : server + '/' + lang + '/api/save_user_app',        
-        dataType    : "json",
-        data : {
-            id      : id_user_app,
-            uuid    : uuid,
-            name    : $('input[name="user-name"]').val(),
-            phone   : $('input[name="user-phone"]').val(),
-            email   : $('input[name="user-email"]').val(),
-            cachehora : (new Date()).getTime()
-
-        }
-    }).done(function(response){
-        if(response.state == 'ok'){
-            $('#i-agree-wrapper').hide();   
-            if (flag_tyc=='N'){
-                flag_tyc='S';
-                $("#show-call").trigger('click');
-            }
-        }
-    });
-    
-}
-*/
 
 function cancel_service(){
+
+        
         page_state  = 'dashboard';       
-        if(!queryId){
-            reset_modal();
-            return true;
-        }
-            
+
         $.mobile.loading("hide");
         clearInterval(demonId);
         clearInterval(verifyServiceStatus);
         
+        
+        if(!queryId){
+            return true;
+        }
+        
         reset_modal();
+         
         
         if(taxiMarker){
             taxiMarker.setMap(null);
@@ -498,7 +359,6 @@ function reset_modal(){
 
     $('#agent-call2-wrapper').hide();
     $('#agent-call-wrapper').show();
-
 }
 
 function verifyCall(){
@@ -640,6 +500,7 @@ function coordenadas(position) {
     longitudOriginal = longitud;
     
     codeLatLng(latitud, longitud);
+    console.log(latitud +'  '+ longitud);
 
     $('#lat').val(latitud);
     $('#lng').val(longitud);
@@ -687,13 +548,17 @@ function address_search() {
  });
 }
 
+
 function cargarMapa() {
     var latlon = new google.maps.LatLng(latitud,longitud); /* Creamos un punto con nuestras coordenadas */
     var myOptions = {
         zoom: 17,
         center: latlon, /* Definimos la posicion del mapa con el punto */
         navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL}, 
+        zoomControl: true,
+        zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER}, 
         mapTypeControl: true, 
+        streetViewControl: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         styles : styles
 
@@ -722,46 +587,6 @@ function cargarMapa() {
 
         codeLatLng(evento.latLng.lat(), evento.latLng.lng());
     }); 
-
-
-   /*
-    google.maps.event.addListener(map, "drag", function() {
-        userMarker.setPosition(map.getCenter());
-    });
-
-    google.maps.event.addListener(map, "dragend", function(evento) {
-       
-        var posicion = map.getCenter();
-        userMarker.setPosition(posicion);
-         
-        latitud = posicion.lat();
-        longitud = posicion.lng();
-            
-        codeLatLng(posicion.lat(), posicion.lng());
-       
-        //console.log('solto: '+posicion.lat()+' - '+ posicion.lng());
-        $('#lat').val(posicion.lat());
-        $('#lng').val(posicion.lng());
-    }); 
-
-    //evento sobre map ‘mouseover’ ( al entrar en el mapa )
-    google.maps.event.addListener(userMarker, 'mouseover', function()
-    {
-        //map.setCenter(marcador.getPosition());
-        map.setZoom(20);
-    });
-    //evento sobre map ‘mouseout’ ( al salir  mapa )
-    google.maps.event.addListener(userMarker, 'mouseout', function()
-    {
-        //map.setCenter(pos_original);
-        map.setZoom(17);
-    });
-    
-    */
-
-   // google.maps.event.addListener(taxiMarker, 'click', function() {
-     //   console.log('entrooooo..');
-   // });
 
 
 }

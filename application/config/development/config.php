@@ -375,7 +375,7 @@ $config['agent_updatelocation_interval'] = 15000; //In milliseconds
 $config['agent_message_inverval'] 			= 3600000; //cada hora  
 
 
-$config['distance_call'] = 2.5; //In kilometros
+$config['distance_call'] = 100000.5; //In kilometros
 $config['distance_call_sos'] = 2.5; //In kilometros
 
  

@@ -2,20 +2,25 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-16" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
+
+    <link rel="shortcut icon" href="<?=base_url()?>assets/images/iconweb.png">
     
 	<title><?= $this->config->item('app_name') ?></title>
 
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/app.css" />
-  	<link rel="stylesheet" href="<?=base_url()?>assets/css/jquery.mobile-1.3.2.min.css" />
  
-    <script src="<?=base_url()?>assets/js/jquery-1.10.2.min.js"></script>
-    <script src="<?=base_url()?>assets/js/jquery.mobile-1.3.2.min.js"></script>
-    <!--<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
+   <link rel="stylesheet" href="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.css" /> 
+   <link rel="stylesheet" href="<?=base_url()?>assets/css/theme-classic.css" />
+
+<script src="<?=base_url()?>assets/js/jqm1.4.5/jquery-1.11.1.min.js"></script>
+<script src="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
     <script type="text/javascript"
   		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsTEMEPiqxEtq9xlzSE-LsUE7q5DXdX-0" >
  	</script>
@@ -49,11 +54,7 @@
 
 <div data-role="page" id="page1"  >
     <div data-theme="e" data-role="header">
-    	<!-- 
-    	<a id="btn-data-user" data-role="button" data-theme="a" href="#user-modal" data-rel="dialog" data-transition="pop" data-icon="grid" ><?=lang('dashboard.your_data')?></a>
-    	 
-    	<a id="btn-localizame1" data-role="button"  data-theme="a" style="display: none;" ><?=lang('dashboard.localizame')?></a>
-    	-->
+
         <h3><?= $this->config->item('app_name') ?></h3>
         <div id="agent-call-wrapper">
     		<a id="agent-call" data-role="button" data-theme="a" href="#" class="ui-btn-right"><?=lang('dashboard.calltaxi')?></a>
@@ -93,21 +94,11 @@
   
 
     <div data-theme="e" data-role="footer" data-position="fixed" align="center">
-    	<!-- Publicidad 
-    	<div align="right" id="banner-wrapper" style="">
-    		<label id="banner-label"></label>
-			<a href="#" id='btn_banner_close'  align="right" data-role="button" data-icon="delete" data-iconpos="notext" data-theme="a" data-inline="true"><?=lang('dashboard.exit_banner')?></a>				
-		</div>
-		-->
 	   	<a href="<?= $this->config->item('app_link') ?>" ><?= $this->config->item('copyright') ?></a>
     </div>
 
     <div id="sound_"></div>    
-    <!--
-    <a href="#user-modal" data-role="button" id="show-user" style="display: none;" data-rel="dialog" data-transition="pop">Show user</a>
-    -->
-    <a href="#call-modal" data-role="button" id="show-call" style="display: none;" data-rel="dialog" data-transition="pop">Show call</a>
-    
+    <a href="#call-modal" data-role="button" id="show-call" style="display: none;" data-rel="dialog" data-transition="slide" >Show call</a>
 </div>
 
 <!-- Start of third page: #popup -->
@@ -141,14 +132,11 @@
 			    
 			    <input name="address-reference" id="address-reference" placeholder="<?=lang('dashboard.callconfirm.address-reference')?>" value="" type="text">
 
-
-				<!--<div id="confirmation-msg"><?=lang('dashboard.callconfirm.content')?>?</div>-->	
-
 			<div id="waiting-msg"><h1><?=lang('dashboard.searching')?></h1></div>
 		</div><!-- /content -->
 
 		<p>
-			<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="call-cancelation"><?=lang('dashboard.cancel')?></a>
+			<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" data-transition="reverse"   id="call-cancelationreverse"><?=lang('dashboard.cancel')?></a>
 		    <a href="#" data-role="button" data-mini="true" data-inline="true" data-icon="check" data-theme="b" id="call-confirmation"><?=lang('dashboard.confirm')?></a>
 		</p>	
 	</div>
@@ -172,15 +160,6 @@
 			<a href="#" id='btn-phone'  data-role="button" data-icon="grid" data-theme="a" data-inline="true"><?=lang('dashboard.call')?></a>
 			</p>
 				
-			<!--<p><div data-role="collapsible">
-					<h2><?=lang('dashboard.infoshare')?>:</h2>
-					<ul data-role="listview" data-split-icon="gear" data-split-theme="d">
-						<li><span id="share-twitter"></span></li>
-						<li><span id="share-facebook"></span></li>
-					</ul>
-				</div>
-			</p>-->
-			
 		</div><!-- /content -->
 				
 		<p>
@@ -188,69 +167,8 @@
 			<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="query-cancelation"><?=lang('dashboard.cancel')?></a>
 		</p>
 	</div>
+	
 </div><!-- /page popup -->
-
-<!-- 
-<div data-role="page" id="user-modal" >
-	<div id="user-wrapper">
-		<div data-role="header" data-theme="e">
-			<h1><?=lang('dashboard.personal_data')?></h1>
-		</div>
-	
-		<div data-role="content" data-theme="d">	
-			<table border=0 width="100%"><tbody>
-	            <tr>
-	            <td ><label for="user-name"><?=lang('dashboard.user_name')?>:</label></td>
-	            <td ><input name="user-name" id="user-name" placeholder="<?=lang('dashboard.user_name')?>" value="" type="text"></td>
-	            </tr>
-	            <tr>
-	            <td ><label for="user-phone"><?=lang('dashboard.user_phone')?>:</label></td>
-	            <td ><input name="user-phone" id="user-phone" placeholder="<?=lang('dashboard.user_phone')?>:" value="" type="tel"></td>
-	            </tr>
-	            <tr>
-	            <td ><label for="user-email"><?=lang('dashboard.user_email')?>:</label></td>
-	            <td ><input name="user-email" id="user-email" placeholder="<?=lang('dashboard.user_email')?>" value="" type="email"></td>
-	            </tr>
-	            </tbody>
-        	</table>
-
-        	<div id="i-agree-wrapper" data-role="fieldcontain">
- 				<a id="show-tyc"   href="#tyc-modal" data-rel="dialog" data-transition="pop" ><?=lang('dashboard.agree_terms')?></a>
- 				<fieldset data-role="controlgroup">
-    				<input type="checkbox" name="ck-i-agree" id="ck-i-agree"  />
-					<label for="ck-i-agree"><?=lang('dashboard.i_agree')?></label>
-				</fieldset>
-			</div>
-
-    	</div>
-		<p>
-			<div id="btn_user_save-wrapper">
-				<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="btn_user_back"><?=lang('dashboard.back')?></a>
-				<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="btn_user_save"><?=lang('dashboard.save')?></a>
-			</div>
-		</p>
-	</div>
-
-</div>
-
-
-<div data-role="page" id="tyc-modal" >
-	<div data-role="header" data-theme="e">
-		<h1><?=lang('dashboard.tyc_msj')?></h1>
-	</div>
-	
-	<div data-role="content" data-theme="d">	
-		<div>
-			<label id='tyc-msj'></label>
-		</div>
-   	</div>
-		
-	<p>
-		<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="btn_tyc_exit"><?=lang('dashboard.back')?></a>
-	</p>
-</div>
-
--->
 
 
 <!-- 
