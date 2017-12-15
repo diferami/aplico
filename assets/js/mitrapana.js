@@ -554,7 +554,7 @@ function cargarMapa() {
     var myOptions = {
         zoom: 17,
         center: latlon, /* Definimos la posicion del mapa con el punto */
-        navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL}, 
+        navigationControlOptions: {style: google.maps.NavigationControlStyle.DEFAULT,},
         zoomControl: true,
         zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER}, 
         mapTypeControl: true, 
