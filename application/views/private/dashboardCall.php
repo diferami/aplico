@@ -43,6 +43,7 @@
  		var average = 'CALL';
  		var uuid 	= '';
  		var idcall  = '<?=$idcall?>';
+ 		var app_path = '<?=ci_config('app_path')?>';
 
  	</script>
 

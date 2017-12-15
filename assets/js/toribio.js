@@ -92,7 +92,7 @@ $(document).ready(function() {
     $('#agent-confirmation').click(function(e){
         $.ajax({
             type : "GET",
-            url : server + '/' + lang + '/api/agent_accept',           
+            url :  lang + '../../../api/agent_accept',           
             dataType : "json",
             data : {
                 queryId : queryId
@@ -133,7 +133,7 @@ $(document).ready(function() {
                 
         $.ajax({
             type : "GET",
-            url : server + lang + '/api/request_cancel',           
+            url : lang + '../../../api/request_cancel',           
             dataType : "json",
             data : {
                 queryId : queryId
@@ -161,7 +161,7 @@ $(document).ready(function() {
                   
                     $.ajax({
                         type : "GET",
-                        url : server + '/' + lang + '/api/call',        
+                        url : lang + '../../../api/call',        
                         dataType : "json",
                         data : {
                             hms1 	: $('input[name="hms1"]').val(),
@@ -230,7 +230,7 @@ function send_sms(idagent,arrival_time,destination){
     if ((idagent>0)&&(!arrival_time=='')){  
         $.ajax({
             type : "GET",
-            url : server + '/' + lang + '/api/send_sms' ,        
+            url : lang + '../../../api/send_sms' ,        
             dataType : "json",
             data : {
                 idagent : idagent,
@@ -262,7 +262,7 @@ function get_all_units(idsucursal){
 
     $.ajax({
             type : "GET",
-            url : server + '/' + lang + '/api/get_all_units' ,        
+            url : lang + '../../../api/get_all_units' ,        
             dataType : "json",
             data : {
                 idsucursal : idsucursal
@@ -320,7 +320,7 @@ function deleteClientLoc(){
 
             $.ajax({
                 type : "GET",
-                url  : server + '/' + lang + '/api/deleteClientLoc',        
+                url  : lang + '../../../api/deleteClientLoc',        
                 dataType : "json",
                 data : {
                     id      : $('input[name="idlocation"]').val()
@@ -352,7 +352,7 @@ function saveClientLoc(){
 
     		$.ajax({
             	type : "GET",
-                url  : server + '/' + lang + '/api/saveClientLoc',        
+                url  : lang + '../../../api/saveClientLoc',        
                 dataType : "json",
                 data : {
                 	id 		: $('input[name="idlocation"]').val(),
@@ -404,7 +404,7 @@ function getSelectCustLocation(){
     $('#name-client').val(nombre);
     $.ajax({
             type : "GET",
-            url : server + '/' + lang + '/api/get_cust_location' ,        
+            url : lang + '../../../api/get_cust_location' ,        
             dataType : "json",
             data : {
             	phone : $('input[name="phone-client"]').val(),
@@ -481,7 +481,7 @@ function setIcons(coordenadas, result){
         map      : map,
         animation: google.maps.Animation.DROP, 
         draggable: true,
-        icon     : server +'/assets/images/casa.png',
+        icon     : app_path +'/assets/images/casa.png',
         title    : result.direccion
     });
     markersArray.push(iconMarker);
@@ -556,7 +556,7 @@ function validarEnter(e) {
 function getTaxiLocation(){
        $.ajax({
             type : "GET",
-            url : server + '/' + lang + '/api/get_taxi_location',        
+            url : lang + '../../../api/get_taxi_location',        
             dataType : "json",
             data : {
                 agent_id : agentId,
@@ -578,7 +578,7 @@ function setTaxiIcon(lat, lng){
         taxiMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat, lng ),
             map: map,
-            icon : server +'/assets/images/taxi.png'
+            icon : app_path +'/assets/images/taxi.png'
         });
         
         tracerRoute(lat, lng, latitud, longitud);
@@ -643,7 +643,7 @@ function reset_modal(){
 function verifyCall(){
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + '/api/verify_call',        
+        url : lang + '../../../api/verify_call',        
         dataType : "json",
         data : {
             queryId : queryId,
@@ -689,7 +689,7 @@ function verifyCall(){
 function verifyServiceState(){
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + '/api/verify_service_status',        
+        url :  lang + '../../../api/verify_service_status',        
         dataType : "json",
         data : {
             queryId : queryId,
@@ -739,7 +739,7 @@ function verifyServiceState(){
 function updateStatusArribo(){
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + '/api/updateStatusArribo',        
+        url : lang + '../../../api/updateStatusArribo',        
         dataType : "json",
         data : {
             queryId : queryId,
@@ -837,7 +837,7 @@ function cargarMapa() {
         map: map, /* Lo vinculamos a nuestro mapa */
         animation: google.maps.Animation.DROP, 
         draggable: true,
-        icon : server + '/assets/images/male.png'
+        icon : app_path + '/assets/images/male.png'
     });
 
     google.maps.event.addListener(userMarker, "dragend", function(evento) {

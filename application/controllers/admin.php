@@ -738,6 +738,7 @@ function service_agent()
 	
 	function callService()
 	{
+		//cuando se haga el modulo de pedir taxi por operador call center
 		//$this->load->view('private/admin.php',(object)array('output' => '' , 'js_files' => array() , 'css_files' => array() , 'op' => 'callService', 'url' => '/admin/dashboardCall' ));
 		$this->load->view('private/admin.php',(object)array('output' => '' , 'js_files' => array() , 'css_files' => array() , 'op' => 'show_agent_map', 'url' => '/admin/viewAgent' ));
 	}

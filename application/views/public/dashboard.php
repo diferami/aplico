@@ -44,6 +44,7 @@
  		var model = '<?=$model?>';
  		var platform = '<?=$platform?>';
  		var version = '<?=$version?>';
+ 		var app_path = '<?=ci_config('app_path')?>';
 </script>
  	
 <script src="<?=base_url()?>assets/js/mitrapana.js"></script>
