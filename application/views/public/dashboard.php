@@ -103,7 +103,7 @@
     </div>
 
     <div id="sound_"></div>    
-    <a href="#call-modal" data-role="button" id="show-call" style="display: none;" data-rel="dialog" data-transition="slide" >Show call</a>
+    <a href="#call-modal" data-role="button" id="show-call" style="display: none;" data-rel="dialog" data-transition="pop" >Show call</a>
 </div>
 
 <!-- Start of third page: #popup -->
