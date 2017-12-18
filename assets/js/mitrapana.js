@@ -124,13 +124,17 @@ $(document).ready(function() {
     
      
     $('#show-taxi').click(function(e){
-        $("[data-role=panel]").panel("close");
+        $("#call-modal").dialog('close');
+        //$("[data-role=panel]").panel("close");
         if(directionsDisplay != null) { 
             directionsDisplay.setMap(null);
             directionsDisplay = null; 
         }
         //$('#agent-call-wrapper').hide();
         //$('#agent-call2-wrapper').show();
+        //reset_modal();
+        
+        
         if(taxiMarker){
             taxiMarker.setMap(null);
             taxiMarker = null;
