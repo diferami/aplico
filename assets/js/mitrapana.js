@@ -158,10 +158,11 @@ $(document).ready(function() {
 
 
 function call_confirmation(){
-        var address = trim($('input[name="address-calle"]').val()) +' '+ trim($('input[name="address-numero"]').val()) +' ' + trim($('input[name="address-alterna"]').val())+' ' + trim($('input[name="address-reference"]').val());
+        //var address = trim($('input[name="address-calle"]').val()) +' '+ trim($('input[name="address-numero"]').val()) +' ' + trim($('input[name="address-alterna"]').val())+' ' + trim($('input[name="address-reference"]').val());
+        var address = trim($('input[name="address-calle"]').val())  +' '+ trim($('input[name="address-reference"]').val());
         if ($('input[name="address"]').val()!=''){  
 
-            if (trim($('input[name="address-numero"]').val())!= '') {  
+            //if (trim($('input[name="address-numero"]').val())!= '') {  
        
                 if ( ($('input[name="lat"]').val()!='') && ($('input[name="lat"]').val()!='0') ){   
                
@@ -208,9 +209,7 @@ function call_confirmation(){
                 alert(msg_configure_device);
             }
         }else{
-            alert(msg_nomenclature);
-            //reset_modal();
-            //$("#call-modal").dialog('close');
+            //alert(msg_nomenclature);
         }
       }else{
         alert(msg_nomenclature_empty);
