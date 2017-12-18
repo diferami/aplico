@@ -565,11 +565,12 @@ function address_search() {
 
 
 function cargarMapa() {
+    
     var latlon = new google.maps.LatLng(latitud,longitud); /* Creamos un punto con nuestras coordenadas */
     var myOptions = {
         zoom: 17,
         center: latlon, /* Definimos la posicion del mapa con el punto */
-        navigationControlOptions: {style: google.maps.NavigationControlStyle.DEFAULT,},
+        navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
         zoomControl: true,
         zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER}, 
         mapTypeControl: true, 
