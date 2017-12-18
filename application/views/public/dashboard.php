@@ -2,11 +2,16 @@
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-    <meta charset="utf-16" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
+	
+	<script type="text/javascript"
+  		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsTEMEPiqxEtq9xlzSE-LsUE7q5DXdX-0" >
+	</script>
+
 
     <link rel="shortcut icon" href="<?=base_url()?>assets/images/iconweb.png">
     
@@ -14,15 +19,12 @@
 
 	<link rel="stylesheet" href="<?=base_url()?>assets/css/app.css" />
  
-   <link rel="stylesheet" href="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.css" /> 
-   <link rel="stylesheet" href="<?=base_url()?>assets/css/theme-classic.css" />
+   	<link rel="stylesheet" href="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.css" /> 
+   	<link rel="stylesheet" href="<?=base_url()?>assets/css/theme-classic.css" />
 
-<script src="<?=base_url()?>assets/js/jqm1.4.5/jquery-1.11.1.min.js"></script>
-<script src="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="<?=base_url()?>assets/js/jqm1.4.5/jquery-1.11.1.min.js"></script>
+	<script src="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-<script type="text/javascript"
-  		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsTEMEPiqxEtq9xlzSE-LsUE7q5DXdX-0" >
-</script>
 
 <script>
  		var lang = '<?=current_lang()?>';
@@ -126,15 +128,6 @@
 				<!--<?=lang('dashboard.callconfirm.you_addrees')?>-->
 				<input name="address-calle" id="address-calle" value="" type="text">
 				
-				<div class="ui-grid-a">
-					<div class="ui-block-a">
-			        	<input name="address-numero" id="address-numero" placeholder="<?=lang('dashboard.callconfirm.number')?>" value="" type="text">       
-			      	</div>
-			      	<div class="ui-block-b">
-			       		<input name="address-alterna" id="address-alterna" placeholder="<?=lang('dashboard.callconfirm.address-alternating')?>" value="" type="text">
-			      	</div>
-				</div>
-			 
 			    <input name="address-reference" id="address-reference" placeholder="<?=lang('dashboard.callconfirm.address-reference')?>" value="" type="text">
 
 			<div id="waiting-msg"><h1><?=lang('dashboard.searching')?></h1></div>

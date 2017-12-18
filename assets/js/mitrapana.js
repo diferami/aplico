@@ -158,11 +158,10 @@ $(document).ready(function() {
 
 
 function call_confirmation(){
-        var address = trim($('input[name="address-calle"]').val()) +' '+ trim($('input[name="address-numero"]').val()) +' ' + trim($('input[name="address-alterna"]').val())+' ' + trim($('input[name="address-reference"]').val());
+        //var address = trim($('input[name="address-calle"]').val()) +' '+ trim($('input[name="address-numero"]').val()) +' ' + trim($('input[name="address-alterna"]').val())+' ' + trim($('input[name="address-reference"]').val());
+        var address = trim($('input[name="address-calle"]').val()) +' '+   trim($('input[name="address-reference"]').val());
         if ($('input[name="address"]').val()!=''){  
 
-            if (trim($('input[name="address-numero"]').val())!= '') {  
-       
                 if ( ($('input[name="lat"]').val()!='') && ($('input[name="lat"]').val()!='0') ){   
                
                     page_state  = 'call';
@@ -207,11 +206,7 @@ function call_confirmation(){
             }else{
                 alert(msg_configure_device);
             }
-        }else{
-            alert(msg_nomenclature);
-            //reset_modal();
-            //$("#call-modal").dialog('close');
-        }
+        
       }else{
         alert(msg_nomenclature_empty);
       }
@@ -575,7 +570,7 @@ function cargarMapa() {
         mapTypeControl: true, 
         streetViewControl: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        styles : styles
+       
 
     };/* HYBRID  Configuramos una serie de opciones como el zoom del mapa y el tipo.*/
 
