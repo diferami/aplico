@@ -1,14 +1,25 @@
-var http = location.protocol;
-var slashes = http.concat("//");
-var server = slashes.concat(window.location.hostname)+ '/es/';
-var server2 = slashes.concat(window.location.hostname)+ '/';
-var server3 = slashes.concat(window.location.hostname)+ '/apps/es/';
-var server4 = slashes.concat(window.location.hostname)+ '/apps/';
-//var server3 = slashes.concat(window.location.hostname)+ '/es/';
-//var server4 = slashes.concat(window.location.hostname)+ '/';
 
-var lang = '';
-//console.log(server);
+var styles = [
+                  {
+                        "featureType": "poi",
+                        "stylers": [
+                          { "visibility": "off" }
+                        ]
+                      },{
+                        "featureType": "transit",
+                        "stylers": [
+                          { "visibility": "off" }
+                        ]
+                      },{
+                        "featureType": "landscape.man_made",
+                        "stylers": [
+                          { "visibility": "off" }
+                        ]
+                      }
+                    ];
+    
+var map;
+
 var lat = lng = deslat = destlng = 0;
 var scode = null;
 var user = null;
@@ -44,26 +55,6 @@ var vel = 0;
 var dir = 0;
 var gpspres = '';
 
-var styles = [
-                  {
-                        "featureType": "poi",
-                        "stylers": [
-                          { "visibility": "off" }
-                        ]
-                      },{
-                        "featureType": "transit",
-                        "stylers": [
-                          { "visibility": "off" }
-                        ]
-                      },{
-                        "featureType": "landscape.man_made",
-                        "stylers": [
-                          { "visibility": "off" }
-                        ]
-                      }
-                    ];
-    
-var map;
 //var latitud;
 //var longitud;
 //var geocoder = new google.maps.Geocoder();
@@ -226,7 +217,7 @@ function getSelectCust(){
 
     $.ajax({
             type : "GET",
-            url : server3 + 'agent/get_all_cust' ,        
+            url : app_path + lang + '/agent/get_all_cust' ,        
             dataType : "json",
             data : {}
     }).done(function(response){
@@ -245,7 +236,7 @@ function getMessage(){
     
     $.ajax({
             type : "GET",
-            url : server3 +  'agent/get_message' ,        
+            url : app_path + lang + '/agent/get_message' ,        
             dataType : "json",
             data : {}
     }).done(function(response){
@@ -295,7 +286,7 @@ function login(id, key){
 
     $.ajax({
         type : "GET",
-        url : server3 + 'api/login',        
+        url : app_path + lang + '/api/login',        
         dataType : "json",
         data : {
             username : id,
@@ -310,8 +301,8 @@ function login(id, key){
             $("#show-dashboard").trigger('click');
             user = response.data
             $('#agent-name').html(user.nombre);
-            $('#agent-photo').attr('src', server4 +"assets/images/agents/" + user.foto) ;
-            $('#gps-state').attr('src', server4 + "assets/images/gps_disconnected.png") ;
+            $('#agent-photo').attr('src', app_path +"assets/images/agents/" + user.foto) ;
+            $('#gps-state').attr('src', app_path + "assets/images/gps_disconnected.png") ;
             // ojoooo no se puede sacar clearInterval de este lado por que no se reinicia el logueo
             clearInterval(updateLocationDemonId);    
             localizame();
@@ -341,7 +332,7 @@ function relogin(id, key){
     
     $.ajax({
         type : "GET",
-        url : server3 + 'api/relogin',        
+        url : app_path + lang + '/api/relogin',        
         dataType : "json",
         data : {
             username : id,
@@ -363,7 +354,7 @@ function relogin(id, key){
 function arrival_confirmation(){
     $.ajax({
         type : "GET",
-        url : server3 + 'agent/arrival_confirmation',        
+        url : app_path + lang + '/agent/arrival_confirmation',        
         dataType : "json",
         data : {
             request_id : request_id,
@@ -379,7 +370,7 @@ function arrival_confirmation(){
 function verifyService(){
     $.ajax({
         type : "GET",
-        url : server3 + 'agent/get_service',        
+        url : app_path + lang + '/agent/get_service',        
         dataType : "json",
         data : {
             demonId : verifyServiceDemonId,
@@ -477,7 +468,7 @@ function switchToFree(){
 
     $.ajax({
         type : "GET",
-        url : server3 + 'agent/switch_to_free',        
+        url : app_path + lang + '/agent/switch_to_free',        
         dataType : "json",
         data : {
             hms1: scode,
@@ -511,7 +502,7 @@ function cancel_service(){
      
     $.ajax({
         type : "GET",
-        url : server3 + 'agent/cancel_service',        
+        url : app_path + lang + '/agent/cancel_service',        
         dataType : "json",
         data : {
             hms1: scode,
@@ -530,7 +521,7 @@ function service_delivered(){
        cust = $('#select-cust').val();
     $.ajax({
         type : "GET",
-        url : server3 +  'agent/delivered_service',        
+        url : app_path + lang + '/agent/delivered_service',        
         dataType : "json",
         data : {
             request_id  : request_id,
@@ -573,7 +564,7 @@ function confirm_service(){
     
     $.ajax({
         type : "GET",
-        url : server3 +  'agent/confirm',        
+        url : app_path + lang + '/agent/confirm',        
         dataType : "json",
         data : {
             request_id : request_id,
@@ -609,7 +600,7 @@ function confirm_service(){
 function verifyServiceState(){
     $.ajax({
         type : "GET",
-        url : server3 +  'agent/verify_service_status',        
+        url : app_path + lang + '/agent/verify_service_status',        
         dataType : "json",
         data : {
             queryId : request_id,
@@ -640,7 +631,7 @@ function updateLocation(){
     
     $.ajax({
         type : "GET",
-        url : server3 +  'agent/update_location',        
+        url : app_path + lang + '/agent/update_location',        
         dataType : "json",
         timeout : 5000,
         data : {
@@ -650,7 +641,7 @@ function updateLocation(){
         },
         
     }).done(function(response){
-            $('#position-state').attr('src',server4 +'assets/images/green_dot.png');
+            $('#position-state').attr('src',app_path +'assets/images/green_dot.png');
             $('#current-position').parent().css('background-color', '#FFFFFF');
             
             if(response.state != 'ok'){
@@ -682,7 +673,7 @@ function help_me(){
     
     $.ajax({
         type : "GET",
-        url : server3 +  'agent/help_me',        
+        url : app_path + lang + '/agent/help_me',        
         dataType : "json",
         timeout : 5000,
         data : {
@@ -707,7 +698,7 @@ function get_sos(){
     
     $.ajax({
         type : "GET",
-        url : server3 + 'agent/get_sos',        
+        url : app_path + lang + '/agent/get_sos',        
         dataType : "json",
         timeout : 5000,
         data : {
@@ -815,11 +806,11 @@ function coords(position) {
 
     gps = 0;
     if (lat && vel<=0) { 
-        $('#gps-state').attr('src', server4 + "assets/images/gps_cellular.png");
+        $('#gps-state').attr('src', app_path + "assets/images/gps_cellular.png");
         gps = 1;
         }
     else if (lat && vel>0) { 
-        $('#gps-state').attr('src', server4 + "assets/images/gps_satellite.png");
+        $('#gps-state').attr('src', app_path + "assets/images/gps_satellite.png");
         gps = 1;
         }
     else if (!lat || lat=="0" || lat== "NULL") {
@@ -831,7 +822,6 @@ function coords(position) {
 }
 
 
-
 function cargarMapa() {
     var directionsDisplay = new google.maps.DirectionsRenderer();
     var directionsService = new google.maps.DirectionsService();
@@ -839,8 +829,11 @@ function cargarMapa() {
     var myOptions = {
         zoom: 15,
         center: latlon, /* Definimos la posicion del mapa con el punto */
-        navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL}, 
+        navigationControlOptions: {style: google.maps.NavigationControlStyle.DEFAULT,},
+        zoomControl: true,
+        zoomControlOptions: { position: google.maps.ControlPosition.LEFT_CENTER}, 
         mapTypeControl: true, 
+        streetViewControl: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         styles : styles
 
@@ -851,13 +844,13 @@ function cargarMapa() {
     agentMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat, lng ),
             map: map,
-            icon : server4 + 'assets/images/taxi.png'
+            icon : app_path + 'assets/images/taxi.png'
     });
     /*Creamos un marcador USUARIO*/   
     userMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat_user, lng_user ),
             map: map,
-            icon : server4 +'assets/images/male.png'
+            icon : app_path +'assets/images/male.png'
     });
 
     var rendererOptions = {
@@ -880,6 +873,7 @@ function cargarMapa() {
     });
 
     
+
 }
 
 
@@ -940,7 +934,7 @@ function get_address(lat, lng) {
 function init(){
     $.ajax({
         type : "GET",
-        url : server3 + 'api/agent_init',        
+        url : app_path +  lang + '/api/agent_init',        
         dataType : "json",
         data : {cachehora : (new Date()).getTime()}
     }).done(function(response){
@@ -952,7 +946,7 @@ function init(){
             message_interval        = response.message_interval;
             //console.log(server2 +"assets/images/" + response.app_icon);
             $('#app_name').html(response.app_name);
-            $('#app_icon').attr('src', server4 +"assets/images/" + response.app_icon) ;
+            $('#app_icon').attr('src', app_path +"assets/images/" + response.app_icon) ;
             $('#copyright').html(response.copyright);
             $('#copyright2').html(response.copyright);
 

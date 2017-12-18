@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/app.css" />
+    <link rel="stylesheet" href="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.css" /> 
+    <link rel="stylesheet" href="<?=base_url()?>assets/css/theme-classic.css" />
 
-	<link rel="stylesheet" href="<?=base_url()?>assets/css/app.css" />
-  	<link rel="stylesheet" href="<?=base_url()?>assets/css/jquery.mobile-1.3.2.min.css" />
-    <script src="<?=base_url()?>assets/js/jquery-1.10.2.min.js"></script>
-    <script src="<?=base_url()?>assets/js/jquery.mobile-1.3.2.min.js"></script>
+    <script src="<?=base_url()?>assets/js/jqm1.4.5/jquery-1.11.1.min.js"></script>
+    <script src="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsTEMEPiqxEtq9xlzSE-LsUE7q5DXdX-0" >
+    </script>
     <script language="Javascript">
         document.oncontextmenu = function(){return false}
     </script>

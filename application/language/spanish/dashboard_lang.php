@@ -24,7 +24,7 @@ $lang['dashboard.reverse'] = 'Atrás';
 $lang['dashboard.cancel_service'] = 'Esta seguro que desea cancelar su servicio de taxi?';
 
 
-$lang['dashboard.error.attempts'] = 'No hay servicios disponibles en la zona, intenta en unos minutos';
+$lang['dashboard.error_attempts'] = 'No hay servicios disponibles en la zona, intenta en unos minutos ó vuelve a intentarlo.';
 $lang['dashboard.searching'] = 'Buscando....';
 $lang['dashboard.search'] = 'Buscar';
 $lang['dashboard.assinged'] = 'Asignado!';

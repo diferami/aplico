@@ -76,7 +76,7 @@ class Api extends CI_Controller {
 			//cancel the request
 			$this->solicitud->update($queryId, array('estado' => 'C'));
 			
-			die(json_encode(array('state' => 'error', 'msg' => lang('dashboard.error.attempts'))) );	
+			die(json_encode(array('state' => 'error', 'msg' => lang('dashboard.error_attempts'))) );	
 		}
 		
 		//TODO: Validar si ya ha sido asignado el agente

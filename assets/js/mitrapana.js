@@ -1,9 +1,3 @@
-var http = location.protocol;
-var slashes = http.concat("//");
-var server = slashes.concat(window.location.hostname)+ '/apps';
-var server4 = slashes.concat(window.location.hostname)+ '/apps';
-//var server = slashes.concat(window.location.hostname);
-//var server4 = slashes.concat(window.location.hostname);
 
 var styles = [
                   {
@@ -43,6 +37,8 @@ var taxiLocationDemonId;
 var agentId;
 var taxiMarker;
 var userMarker;
+
+var attemp = 0;
 
 //window.oncontextmenu = function(){return false};
 
@@ -89,7 +85,7 @@ $(document).ready(function() {
     $('#agent-confirmation').click(function(e){
         $.ajax({
             type : "GET",
-            url : server + '/' + lang + '/api/agent_accept',           
+            url : app_path + lang + '/api/agent_accept',           
             dataType : "json",
             data : {
                 queryId : queryId
@@ -135,9 +131,12 @@ $(document).ready(function() {
         }
         //$('#agent-call-wrapper').hide();
         //$('#agent-call2-wrapper').show();
-        
+        if(taxiMarker){
+            taxiMarker.setMap(null);
+            taxiMarker = null;
+        }
         clearInterval(taxiLocationDemonId);
-        //getTaxiLocation();
+        getTaxiLocation();
         taxiLocationDemonId = setInterval(getTaxiLocation, verification_interval);
 
     });
@@ -169,11 +168,13 @@ function call_confirmation(){
                     page_state  = 'call';
                     $.mobile.loading("show");
                     $('#call-confirmation, #confirmation-msg').hide();
+                    $('#waiting-msg').html('<h1>'+searching_msg+'</h1>');
+
                     $('#waiting-msg').show();
                     
                     $.ajax({
                         type : "GET",
-                        url : server + '/' + lang + '/api/call',        
+                        url : app_path +  lang + '/api/call',        
                         dataType : "json",
                         data : {
                             hms1    : $('input[name="hms1"]').val(),
@@ -261,7 +262,7 @@ function cancel_service(){
                 
         $.ajax({
             type : "GET",
-            url : server + '/' + lang + '/api/request_cancel',           
+            url : app_path +  lang + '/api/request_cancel',           
             dataType : "json",
             data : {
                 queryId : queryId
@@ -280,7 +281,7 @@ function trim(myString)
 function getTaxiLocation(){
        $.ajax({
             type : "GET",
-            url : server + '/' + lang + '/api/get_taxi_location',        
+            url : app_path +  lang + '/api/get_taxi_location',        
             dataType : "json",
             data : {
                 agent_id : agentId,
@@ -302,7 +303,7 @@ function setTaxiIcon(lat, lng){
         taxiMarker = new google.maps.Marker({
             position: new google.maps.LatLng( lat, lng ),
             map: map,
-            icon : server4 +'/assets/images/taxi.png'
+            icon : app_path +'/assets/images/taxi.png'
         });
         
         tracerRoute(lat, lng, latitud, longitud);
@@ -349,6 +350,10 @@ function setUserIcon(lat, lng){
 }
 
 function reset_modal(){
+    attemp = 0;
+    //$('#slider-mini').val(0);
+    //$('#slider-mini').slider('refresh');
+
     $('#confirm-wrapper').show();
     $('#waiting-msg').html(searching_msg);
     $('#waiting-msg').hide();
@@ -362,9 +367,13 @@ function reset_modal(){
 }
 
 function verifyCall(){
+    attemp = attemp + 1;
+    var avance = attemp*100/4;
+    //$('#slider-mini').val(avance);
+    //$('#slider-mini').slider('refresh');
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + '/api/verify_call',        
+        url : app_path + lang + '/api/verify_call',        
         dataType : "json",
         data : {
             queryId : queryId,
@@ -377,7 +386,13 @@ function verifyCall(){
             page_state  = 'dashboard';
             $.mobile.loading("hide");
             clearInterval(demonId);
+            
+            reset_modal();
+            
             $('#waiting-msg').html(response.msg);
+            play_sound('yes'); 
+            alert(response.msg);
+            
         }
          
         if(response.state == '1'){
@@ -423,7 +438,7 @@ function verifyCall(){
 function verifyServiceState(){
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + '/api/verify_service_status',        
+        url : app_path + lang + '/api/verify_service_status',        
         dataType : "json",
         data : {
             queryId : queryId,
@@ -472,7 +487,7 @@ function verifyServiceState(){
 function updateStatusArribo(){
     $.ajax({
         type : "GET",
-        url : server + '/' + lang + '/api/updateStatusArribo',        
+        url : app_path +  lang + '/api/updateStatusArribo',        
         dataType : "json",
         data : {
             queryId : queryId,
@@ -575,7 +590,7 @@ function cargarMapa() {
         map: map, /* Lo vinculamos a nuestro mapa */
         animation: google.maps.Animation.DROP, 
         draggable: true,
-        icon : server4 + '/assets/images/male.png'
+        icon : app_path + '/assets/images/male.png'
     });
 
    

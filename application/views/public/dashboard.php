@@ -45,8 +45,9 @@
  		var platform = '<?=$platform?>';
  		var version = '<?=$version?>';
  		var app_path = '<?=ci_config('app_path')?>';
+ 		var max_verification_attemps = '<?=ci_config('max_verification_attemps')?>';
 </script>
- 	
+  	
 <script src="<?=base_url()?>assets/js/mitrapana.js"></script>
 
 </head>
@@ -137,6 +138,9 @@
 			    <input name="address-reference" id="address-reference" placeholder="<?=lang('dashboard.callconfirm.address-reference')?>" value="" type="text">
 
 			<div id="waiting-msg"><h1><?=lang('dashboard.searching')?></h1></div>
+			<!-- 
+				<input type="range" name="slider-mini" id="slider-mini" value="0" min="0" max="100" data-highlight="true" />
+			-->
 		</div><!-- /content -->
 
 		<p>

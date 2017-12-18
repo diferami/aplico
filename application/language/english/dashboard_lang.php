@@ -19,9 +19,9 @@ $lang['dashboard.callconfirm.address-reference'] = 'Reference';
 
 $lang['dashboard.cancel'] = 'Cancel service';
 $lang['dashboard.confirm'] = 'Confirm';
+$lang['dashboard.reverse'] = 'Back';
 $lang['dashboard.cancel_service'] = 'Are you sure you want to cancel your service taxi?';
 
-$lang['dashboard.error.attempts'] = 'There is not available services at the moment, please, try again few minutes latter';
 $lang['dashboard.error_attempts'] = 'There is not available services at the moment, please, try again few minutes latter';
 $lang['dashboard.searching'] = 'Searching....';
 $lang['dashboard.search'] = 'Search';

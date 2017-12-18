@@ -27,7 +27,8 @@
 <script type='text/javascript' src='//cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js'></script>
 
 <script>
-        var lang = '';
+        var lang = 'es';
+        var app_path = '<?=ci_config('app_path')?>';
 </script>
 
 </head>
