@@ -136,7 +136,6 @@ $(document).ready(function() {
         //$('#agent-call2-wrapper').show();
         //reset_modal();
         
-        
         if(taxiMarker){
             taxiMarker.setMap(null);
             taxiMarker = null;
