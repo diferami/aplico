@@ -367,7 +367,7 @@ $config['app_icon'] = 'icon_mototaps.png';
 $config['app_users_download'] = 'mototaps/mototaps-user.apk';
 $config['app_agent_download'] = 'mototaps/mototaps-agent.apk';
 
-$config['max_verification_attemps'] = 10;
+$config['max_verification_attemps'] = 6;
 $config['verification_interval'] = 15000; //In milliseconds
  
 $config['agent_verification_interval'] = 15000; //In milliseconds
