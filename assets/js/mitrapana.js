@@ -58,8 +58,6 @@ window.onpopstate = function(event) {
         if ((hash === '') && (page_state==='call')) {
             console.log('history.go(1)');
             history.go(1); 
-            alert('Actualmente tiene un servicio de mototaxi asignado. Si realmente desea salir intente nuevamente.');
-            page_state  = 'dashboard';
         }
       }
     });
