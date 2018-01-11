@@ -164,7 +164,7 @@
 		</div><!-- /content -->
 				
 		<p>
-			<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="show-taxi"><?=lang('dashboard.showtaxi')?></a>
+			<a href="#" data-role="button" data-mini="true" data-inline="true"  id="show-taxi"><?=lang('dashboard.showtaxi')?></a>
 			<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="query-cancelation"><?=lang('dashboard.cancel')?></a>
 		</p>
 	</div>
