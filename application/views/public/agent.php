@@ -7,24 +7,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
 <link rel="shortcut icon" href="<?=base_url()?>assets/images/iconweb.png">
 
+<!--
 <link rel="stylesheet" href="<?=base_url()?>assets/css/jquery.mobile-1.3.2.min.css" />
 <link rel="stylesheet" href="<?=base_url()?>assets/css/appagt.css" /> 
 <script src="<?=base_url()?>assets/js/jquery-1.10.2.min.js"></script>
 <script src="<?=base_url()?>assets/js/jquery.mobile-1.3.2.min.js"></script>
+
+<link rel="stylesheet" href="<?=base_url()?>assets/css/theme-classic.css" />
+
+-->
+
+<link rel="stylesheet" href="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.css" /> 
+<script src="<?=base_url()?>assets/js/jqm1.4.5/jquery-1.11.1.min.js"></script>
+<script src="<?=base_url()?>assets/js/jqm1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="<?=base_url()?>assets/js/jquery.price_format.js"></script>
-<!--<script src="assets/js/jquery.price_format.min.js"></script>-->
+<link rel="stylesheet" href="<?=base_url()?>assets/css/theme-agent.min.css" />
 
 <script type="text/javascript"
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6DTzndSIlbMN0Vo-jjoQU7lah6YnfOHw" >
 </script>
 
 <script src="<?=base_url()?>assets/js/komira.js"></script>
-
-
 <script type='text/javascript' src='<?=base_url()?>assets/js/jquery.marquee.min.js'></script>
-
-    
-<script type='text/javascript' src='//cdn.jsdelivr.net/jquery.marquee/1.3.1/jquery.marquee.min.js'></script>
 
 <script>
         var lang = 'es';
@@ -74,7 +78,7 @@
                 <input name="password" id="password" placeholder="" value="" type="password">
             </div>
             <a href="#dashboard" data-role="button" id="show-dashboard" style="display: none;">Show page "two"</a>
-            <input type="button" data-theme="e" data-icon="arrow-r" data-iconpos="right"
+            <input type="button" data-theme="c" data-icon="arrow-r" data-iconpos="right"
             value="Ingresar" id="do-login">
         </form>
 
@@ -132,7 +136,7 @@
         
         <div data-role="section">
             <div id="btn-aplico-wrap">
-                <input type="button" id="btn-aplico" value="ACEPTAR" data-theme="e" data-icon="plus"  data-iconpos="top" >
+                <input type="button" id="btn-aplico" value="ACEPTAR" data-theme="c" data-icon="plus"  data-iconpos="top" >
             </div>  
         </div>
         <div data-role="section">
@@ -142,13 +146,13 @@
         </div>
         <div data-role="section">
             <div id="btn-entregado-wrap">
-                <input type="button" id="btn-entregado" value="ENTREGADO" data-theme="e" data-icon="check" data-iconpos="top">
+                <input type="button" id="btn-entregado" value="ENTREGADO" data-theme="c" data-icon="check" data-iconpos="top">
             </div>
         </div>
       
         <div data-role="section">
             <div id="btn-cancelar-wrap">
-                <input type="button" id="btn-cancelar" value="CANCELAR" data-icon="delete" data-iconpos="top" >
+                <input type="button" id="btn-cancelar" value="CANCELAR" data-theme="d" data-icon="delete" data-iconpos="top" >
             </div>
         </div>
 
@@ -215,7 +219,7 @@
         </div>
         <div>
             Valor servicio:
-            <input name="service-price" id="service-price" placeholder="" value="number" type="number">
+         <!--   <input name="service-price" id="service-price" placeholder="" value="number" type="number"> -->
         </div>
         <div id="wraper-voucher">
             Cliente:
