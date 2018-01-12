@@ -131,7 +131,7 @@ $(document).ready(function() {
     $('#show-taxi').click(function(e){
         $("#call-modal").dialog('close');
         //$('#map_canvas').gmap('refresh');
-        google.maps.event.trigger($('#map_canvas'), 'resize');
+        google.maps.event.trigger(map, 'resize');
         //cargarMapa();
        
         //$("[data-role=panel]").panel("close");
