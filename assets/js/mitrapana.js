@@ -65,9 +65,14 @@ window.onpopstate = function(event) {
 };
     
 
+
 $(document).ready(function() {
     
    
+    //$('#page1').live('pageshow',function(event, ui){
+      //  $('#map_canvas').gmap('refresh');
+    //});
+
     $('#waiting-msg, #agent-wrapper, #agent-call2-wrapper').hide();
     
     localizame(); /*Cuando cargue la pÃ¡gina, cargamos nuestra posiciÃ³n*/ 
@@ -125,6 +130,10 @@ $(document).ready(function() {
      
     $('#show-taxi').click(function(e){
         $("#call-modal").dialog('close');
+        //$('#map_canvas').gmap('refresh');
+        google.maps.event.trigger($('#map_canvas'), 'resize');
+        //cargarMapa();
+       
         //$("[data-role=panel]").panel("close");
         if(directionsDisplay != null) { 
             directionsDisplay.setMap(null);

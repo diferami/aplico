@@ -27,6 +27,7 @@
 
 
 <script>
+		
  		var lang = '<?=current_lang()?>';
  		var verification_interval = <?=ci_config('verification_interval')?>;
  		var app_country = '<?=ci_config('app_country')?>';
