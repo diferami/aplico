@@ -129,12 +129,12 @@ $(document).ready(function() {
     
      
     $('#show-taxi').click(function(e){
-        $("#call-modal").dialog('close');
+        //$("#call-modal").dialog('close');
         //$('#map_canvas').gmap('refresh');
-        google.maps.event.trigger(map, 'resize');
+        //google.maps.event.trigger(map, 'resize');
         //cargarMapa();
-       
-        //$("[data-role=panel]").panel("close");
+        $("[data-role=panel]").panel("close");
+        
         if(directionsDisplay != null) { 
             directionsDisplay.setMap(null);
             directionsDisplay = null; 

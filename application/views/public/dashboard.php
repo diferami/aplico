@@ -27,7 +27,7 @@
 
 
 <script>
-		
+
  		var lang = '<?=current_lang()?>';
  		var verification_interval = <?=ci_config('verification_interval')?>;
  		var app_country = '<?=ci_config('app_country')?>';
@@ -110,7 +110,8 @@
 </div>
 
 <!-- Start of third page: #popup -->
-<div data-role="page" id="call-modal" data-close-btn="none">
+<div data-role="panel" id="call-modal" data-display="push" data-position="right" data-display="overlay" data-position-fixed="true" data-swipe-close="false" data-dismissible="false">
+<!-- <div data-role="page" id="call-modal" data-close-btn="none">-->
 	<div id="confirm-wrapper">
 		<div data-role="header" data-theme="e" align="center">
 			<b><?=lang('dashboard.callconfirm.title')?></b>
@@ -165,7 +166,8 @@
 		</div><!-- /content -->
 				
 		<p>
-			<a href="#" data-role="button" data-mini="true" data-inline="true"  id="show-taxi"><?=lang('dashboard.showtaxi')?></a>
+			<!--<a href="#" data-role="button" data-mini="true" data-inline="true"  id="show-taxi"><?=lang('dashboard.showtaxi')?></a>-->
+			<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="show-taxi"><?=lang('dashboard.showtaxi')?></a>   <!--ver taxi-->
 			<a href="#" data-role="button" data-mini="true" data-inline="true" data-rel="back" id="query-cancelation"><?=lang('dashboard.cancel')?></a>
 		</p>
 	</div>
