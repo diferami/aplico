@@ -45,7 +45,7 @@ var attemp = 0;
 
 window.onpopstate = function(event) {
  
- if (window.history && window.history.pushState) {
+  if (window.history && window.history.pushState) {
     $(window).on('popstate', function() {
      console.log('-->'+page_state);
       var hashLocation = location.hash;
@@ -65,14 +65,8 @@ window.onpopstate = function(event) {
 };
     
 
-
 $(document).ready(function() {
     
-   
-    //$('#page1').live('pageshow',function(event, ui){
-      //  $('#map_canvas').gmap('refresh');
-    //});
-
     $('#waiting-msg, #agent-wrapper, #agent-call2-wrapper').hide();
     
     localizame(); /*Cuando cargue la pÃ¡gina, cargamos nuestra posiciÃ³n*/ 
@@ -129,33 +123,26 @@ $(document).ready(function() {
     
      
     $('#show-taxi').click(function(e){
-        //$("#call-modal").dialog('close');
-        //$('#map_canvas').gmap('refresh');
-        //google.maps.event.trigger(map, 'resize');
-        //cargarMapa();
+    
         $("[data-role=panel]").panel("close");
-        
+
         if(directionsDisplay != null) { 
             directionsDisplay.setMap(null);
             directionsDisplay = null; 
         }
-        //$('#agent-call-wrapper').hide();
-        //$('#agent-call2-wrapper').show();
-        //reset_modal();
         
         if(taxiMarker){
             taxiMarker.setMap(null);
             taxiMarker = null;
         }
-        clearInterval(taxiLocationDemonId);
-        getTaxiLocation();
-        taxiLocationDemonId = setInterval(getTaxiLocation, verification_interval);
-
+        setTimeout(cargarMapa, 500);
+        setTimeout(viewTaxi, 1000);
     });
 
     $('#btn-address-search').click(function(e){
         e.preventDefault();
-        address_search();
+        //address_search();
+        google.maps.event.trigger(map, 'resize');   
     });
 
   
@@ -168,6 +155,11 @@ $(document).ready(function() {
 });
 
 
+function viewTaxi(){
+     clearInterval(taxiLocationDemonId);
+    getTaxiLocation();
+    taxiLocationDemonId = setInterval(getTaxiLocation, verification_interval);
+}
 
 function call_confirmation(){
         //var address = trim($('input[name="address-calle"]').val()) +' '+ trim($('input[name="address-numero"]').val()) +' ' + trim($('input[name="address-alterna"]').val())+' ' + trim($('input[name="address-reference"]').val());
@@ -582,8 +574,7 @@ function cargarMapa() {
         mapTypeControl: true, 
         streetViewControl: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-       
-
+        
     };/* HYBRID  Configuramos una serie de opciones como el zoom del mapa y el tipo.*/
 
     map = new google.maps.Map($("#map_canvas").get(0), myOptions); /*Creamos el mapa y lo situamos en su capa */
@@ -609,9 +600,12 @@ function cargarMapa() {
 
         codeLatLng(evento.latLng.lat(), evento.latLng.lng());
     }); 
-
-
+    
 }
+
+
+
+
 
 var calle = '';
 var ruta = '';

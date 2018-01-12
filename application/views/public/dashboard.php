@@ -3,7 +3,8 @@
 <!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=9">
@@ -57,7 +58,7 @@
  
 <body>
 
-<div data-role="page" id="page1"  >
+<div data-role="page" id="page1">
     <div data-theme="e" data-role="header">
 
         <h3><?= $this->config->item('app_name') ?></h3>
@@ -92,11 +93,11 @@
 
     </div>
     
-   <!-- Mapa -->
-    <div data-role="content" class="padding-0" >
+ 
+    <div data-role="content" class="padding-0">
          <div id="map_canvas" ></div>
    </div>
-  
+
 
     <div data-theme="e" data-role="footer" data-position="fixed" align="center">
 	   <!--	
@@ -106,12 +107,12 @@
     </div>
 
     <div id="sound_"></div>    
-    <a href="#call-modal" data-role="button" id="show-call" style="display: none;" data-rel="dialog" data-transition="pop" >Show call</a>
+    <a href="#call-modal" data-role="button" id="show-call" style="display: none;" data-rel="dialog" data-transition="slide" >Show call</a>
 </div>
 
 <!-- Start of third page: #popup -->
-<div data-role="panel" id="call-modal" data-display="push" data-position="right" data-display="overlay" data-position-fixed="true" data-swipe-close="false" data-dismissible="false">
-<!-- <div data-role="page" id="call-modal" data-close-btn="none">-->
+<!-- <div data-role="panel" id="call-modal" data-display="push" data-position="right" data-display="overlay" data-position-fixed="true" data-swipe-close="false" data-dismissible="false">-->
+<div data-role="page" id="call-modal" data-close-btn="none">
 	<div id="confirm-wrapper">
 		<div data-role="header" data-theme="e" align="center">
 			<b><?=lang('dashboard.callconfirm.title')?></b>
