@@ -67,7 +67,8 @@ window.onpopstate = function(event) {
 
 $(document).ready(function() {
     
-    $('#waiting-msg, #agent-wrapper, #agent-call2-wrapper').hide();
+    $('#progress-bar, #waiting-msg, #agent-wrapper, #agent-call2-wrapper').hide();
+    
     
     localizame(); /*Cuando cargue la pÃ¡gina, cargamos nuestra posiciÃ³n*/ 
 
@@ -139,6 +140,10 @@ $(document).ready(function() {
         setTimeout(viewTaxi, 1000);
     });
 
+    $('#call-cancelationreverse').click(function(e){
+        setTimeout(cargarMapa, 500);
+    });
+
     $('#btn-address-search').click(function(e){
         e.preventDefault();
         //address_search();
@@ -163,6 +168,9 @@ function viewTaxi(){
 
 function call_confirmation(){
         //var address = trim($('input[name="address-calle"]').val()) +' '+ trim($('input[name="address-numero"]').val()) +' ' + trim($('input[name="address-alterna"]').val())+' ' + trim($('input[name="address-reference"]').val());
+        attemp = 0;
+        document.getElementById("progress-bar").value = 0;
+        
         var address = trim($('input[name="address-calle"]').val()) +' '+   trim($('input[name="address-reference"]').val());
         if ($('input[name="address"]').val()!=''){  
 
@@ -174,6 +182,7 @@ function call_confirmation(){
                     $('#waiting-msg').html('<h1>'+searching_msg+'</h1>');
 
                     $('#waiting-msg').show();
+                    $('#progress-bar').show();
                     
                     $.ajax({
                         type : "GET",
@@ -350,12 +359,12 @@ function setUserIcon(lat, lng){
 
 function reset_modal(){
     attemp = 0;
-    //$('#slider-mini').val(0);
-    //$('#slider-mini').slider('refresh');
-
+    document.getElementById("progress-bar").value = 0;
+    
     $('#confirm-wrapper').show();
     $('#waiting-msg').html(searching_msg);
     $('#waiting-msg').hide();
+    $('#progress-bar').hide();
     $('#call-confirmation').show();
     
     $('#confirmation-msg').show();
@@ -367,9 +376,10 @@ function reset_modal(){
 
 function verifyCall(){
     attemp = attemp + 1;
-    var avance = attemp*100/4;
-    //$('#slider-mini').val(avance);
-    //$('#slider-mini').slider('refresh');
+    var avance = (attemp*100)/max_verification_attemps;
+    document.getElementById("progress-bar").value = avance;
+    
+    console.log("avance:"+avance);
     $.ajax({
         type : "GET",
         url : app_path + lang + '/api/verify_call',        

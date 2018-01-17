@@ -71,7 +71,7 @@ class Api extends CI_Controller {
 		
 		$this->session->set_userdata('verification_attps', $attempts);
 		
-		if($attempts > ci_config('max_verification_attemps')){
+		if($attempts >= ci_config('max_verification_attemps')){
 			$this->session->unset_userdata('verification_attps');
 			//cancel the request
 			$this->solicitud->update($queryId, array('estado' => 'C'));

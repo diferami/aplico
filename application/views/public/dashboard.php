@@ -137,6 +137,8 @@
 			<!-- 
 				<input type="range" name="slider-mini" id="slider-mini" value="0" min="0" max="100" data-highlight="true" />
 			-->
+			<progress id="progress-bar" max="100" value="0" style="width: 100%;"></progress>
+
 		</div><!-- /content -->
 
 		<p>
