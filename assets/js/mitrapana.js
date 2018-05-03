@@ -1,6 +1,6 @@
 
 var styles = [
-                  {
+                    {
                         "featureType": "poi",
                         "stylers": [
                           { "visibility": "off" }
@@ -16,7 +16,7 @@ var styles = [
                           { "visibility": "off" }
                         ]
                       }
-                    ];
+            ];
     
 var map;
 var latitud;
@@ -161,7 +161,7 @@ $(document).ready(function() {
 
 
 function viewTaxi(){
-     clearInterval(taxiLocationDemonId);
+    clearInterval(taxiLocationDemonId);
     getTaxiLocation();
     taxiLocationDemonId = setInterval(getTaxiLocation, verification_interval);
 }
@@ -226,8 +226,6 @@ function call_confirmation(){
 
 }
 
-    
-
 function play_sound(element) {
         document.getElementById(element).play();
 }
@@ -244,7 +242,6 @@ function validarEnter(e) {
         address_search();
     } 
 }
-
 
 function cancel_service(){
 
@@ -279,13 +276,11 @@ function cancel_service(){
 
 }
 
-
 function trim(myString)
 {
     return myString.replace(/^\s+/g,'').replace(/\s+$/g,'')
 }
     
-
 function getTaxiLocation(){
        $.ajax({
             type : "GET",
@@ -342,7 +337,6 @@ function tracerRoute(lat, lng, lat2, lng2){
     });
 
 }
-
 
 function setUserIcon(lat, lng){
     var latlon = new google.maps.LatLng(lat, lng);
@@ -491,8 +485,6 @@ function verifyServiceState(){
     }); 
 }
 
-
-
 function updateStatusArribo(){
     $.ajax({
         type : "GET",
@@ -507,7 +499,6 @@ function updateStatusArribo(){
       
     }); 
 }
-
 
 function localizame() {
     if (navigator.geolocation) { /* Si el navegador tiene geolocalizacion */
@@ -532,8 +523,6 @@ function coordenadas(position) {
     cargarMapa();
 }
 
-
-
 function errores(err) {
     /*Controlamos los posibles errores */
     if (err.code == 0) {
@@ -550,7 +539,6 @@ function errores(err) {
     }
 }
  
-
 function address_search() {
  var address = app_country+','+document.getElementById("address").value;
  geocoder.geocode( { 'address': address}, function(results, status) {
@@ -571,7 +559,6 @@ function address_search() {
     }
  });
 }
-
 
 function cargarMapa() {
     var latlon = new google.maps.LatLng(latitud,longitud); /* Creamos un punto con nuestras coordenadas */
@@ -612,10 +599,6 @@ function cargarMapa() {
     }); 
     
 }
-
-
-
-
 
 var calle = '';
 var ruta = '';
