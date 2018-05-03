@@ -358,12 +358,12 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
  //Custom config
-$config['app_path'] = 'https://mototaps.com/apps/'; 
-$config['app_name'] = 'MotoTaps';
+$config['app_path'] = 'https://mototaps.com/riotaxi/'; 
+$config['app_name'] = 'RioTaxi';
 $config['app_country'] = 'Colombia';
 $config['copyright'] = 'by GPTechnologies';
 $config['app_link'] = 'http://www.mototaps.com'; 
-$config['app_icon'] = 'icon_mototaps.png';
+$config['app_icon'] = 'icon.png';
 $config['app_users_download'] = 'mototaps/mototaps-user.apk';
 $config['app_agent_download'] = 'mototaps/mototaps-agent.apk';
 
