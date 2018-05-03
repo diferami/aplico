@@ -19,8 +19,9 @@
  */
  	//define('ENVIRONNT', 'productio);
 	//define('ENVIRONMENT', 'testing');
-	define('ENVIRONMENT', 'development');
-	
+	//define('ENVIRONMENT', 'development');
+
+	define('ENVIRONMENT', 'riotaxi');
 	//define('ENVIRONMENT', 'mototaps');
 	//define('ENVIRONMENT', 'mitaxijj');
 	//define('ENVIRONMENT', 'buskoo');
@@ -61,6 +62,10 @@ if (defined('ENVIRONMENT'))
 			date_default_timezone_set('America/Guayaquil');
 		break;
 		case 'mototaps':
+			error_reporting(0);
+			date_default_timezone_set('America/Bogota');
+		break;
+		case 'riotaxi':
 			error_reporting(0);
 			date_default_timezone_set('America/Bogota');
 		break;
