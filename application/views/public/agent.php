@@ -84,7 +84,7 @@
 
     </div>
     <div style=" text-align:center">
-           <img id="app_icon" style="width: 96px; height: 96px" src="<?=base_url()?>assets/images/taxi-logo.png">
+           <img id="app_icon" style="width: 96px; height: 96px" src="<?=base_url()?>assets/images/<?=ci_config('app_icon')?>">
     </div>
     <div data-theme="e" data-role="footer" data-position="fixed">
         <!-- Mensajes -->

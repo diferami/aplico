@@ -363,9 +363,9 @@ $config['app_name'] = 'RioTaxi';
 $config['app_country'] = 'Colombia';
 $config['copyright'] = 'by GPTechnologies';
 $config['app_link'] = 'http://www.mototaps.com'; 
-$config['app_icon'] = 'icon.png';
-$config['app_users_download'] = 'mototaps/mototaps-user.apk';
-$config['app_agent_download'] = 'mototaps/mototaps-agent.apk';
+$config['app_icon'] = 'icon_riotaxi.png';
+$config['app_users_download'] = 'riotaxi/riotaxi-user.apk';
+$config['app_agent_download'] = 'mototaps/riotaxi-agent.apk';
 
 $config['max_verification_attemps'] = 6;
 $config['verification_interval'] = 15000; //In milliseconds
