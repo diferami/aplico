@@ -63,7 +63,8 @@
 
         <h3><?= $this->config->item('app_name') ?></h3>
         <div id="agent-call-wrapper">
-    		<a id="agent-call" data-role="button" data-theme="a" href="#" class="ui-btn-right"><?=lang('dashboard.calltaxi')?></a>
+
+    		<a id="agent-callTemp" data-role="button" data-theme="a" href="#call-modal" class="ui-btn-right" data-rel="dialog" data-transition="slide"><?=lang('dashboard.calltaxi')?></a>
     	</div>
     	<div id="agent-call2-wrapper">
     		<a id="agent-call2" data-role="button" data-theme="b" href="#call-modal" class="ui-btn-right" data-rel="dialog" data-transition="pop" ><?=lang('dashboard.showtaxi')?></a>
@@ -130,7 +131,7 @@
 
 				<!--<?=lang('dashboard.callconfirm.you_addrees')?>-->
 				<input name="address-calle" id="address-calle" value="" type="text">
-				
+				wwwwwwwwww<span id="sp-address-calle">xxxxxxxxxx</span>
 			    <input name="address-reference" id="address-reference" placeholder="<?=lang('dashboard.callconfirm.address-reference')?>" value="" type="text">
 
 			<div id="waiting-msg"><h1><?=lang('dashboard.searching')?></h1></div>

@@ -158,9 +158,14 @@ $(document).ready(function() {
 
   
     $('#agent-call').click(function(e){
+        $('input[name="address-calle"]').val(trim($('input[name="address"]').val()));
+        /// $('input[name="address-reference"]').val(trim($('input[name="address"]').val()));
+         $("#address-reference").val('30');
+         $('#sp-address-calle').html(trim($('input[name="address"]').val()));
+        console.log('Entro al clik');
         clearInterval(taxiLocationDemonId);
          //$('#address-calle').html(trim($('input[name="address"]').val()));
-        $('#address-calle').val(trim($('input[name="address"]').val()));
+        //$('#address-calle').val(trim($('input[name="address"]').val()));
         
         $("#show-call").trigger('click');
 
