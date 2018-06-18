@@ -38,6 +38,8 @@ var agentId;
 var taxiMarker;
 var userMarker;
 
+var addressTemp ='';
+
 var attemp = 0;
 
 //window.oncontextmenu = function(){return false};
@@ -72,12 +74,16 @@ $(document).ready(function() {
     
     localizame(); /*Cuando cargue la pÃ¡gina, cargamos nuestra posiciÃ³n*/ 
 
-    $('#address-calle, #address-numero, #address-alterna').change(function(e){
-        var address = trim($('input[name="address-calle"]').val()) +' '+ trim($('input[name="address-numero"]').val()) +' ' + trim($('input[name="address-alterna"]').val());
-        $('#address').html(address);
-
-    });
+    //$('#address-calle, #address-numero, #address-alterna').change(function(e){
+      //  var address = trim($('input[name="address-calle"]').val()) +' '+ trim($('input[name="address-numero"]').val()) +' ' + trim($('input[name="address-alterna"]').val());
+       // $('#address').html(address);
+    //});
     
+    $('#address').change(function(e){
+        $('#address-calle').val(trim($('input[name="address"]').val()));
+       
+    });
+
     $('#calling-agent').click(function (e){
         e.preventDefault();
     });
@@ -153,8 +159,11 @@ $(document).ready(function() {
   
     $('#agent-call').click(function(e){
         clearInterval(taxiLocationDemonId);
-  
+         //$('#address-calle').html(trim($('input[name="address"]').val()));
+        $('#address-calle').val(trim($('input[name="address"]').val()));
+        
         $("#show-call").trigger('click');
+
     });
 
 });
@@ -172,7 +181,8 @@ function call_confirmation(){
         document.getElementById("progress-bar").value = 0;
         
         var address = trim($('input[name="address-calle"]').val()) +' '+   trim($('input[name="address-reference"]').val());
-        if ($('input[name="address"]').val()!=''){  
+        console.log('call_confirmation:'+address);
+        if (address!=''){  
 
                 if ( ($('input[name="lat"]').val()!='') && ($('input[name="lat"]').val()!='0') ){   
                
@@ -638,18 +648,21 @@ function codeLatLng(lat, lng) {
                 var guion = formatted_addr.indexOf("-");
                 if (guion>0) {
                     formatted_addr = formatted_addr.substring(0, guion) + ' - ';
-                    $('#address-calle').val(formatted_addr);
+                    //$('#address-calle').val(formatted_addr);
+                    
                     $('#address-numero').val('');
                     $('#address-alterna').val('');
                      $('#address-reference').val('');
 
                 } else{
                     formatted_addr = sector.long_name + ', ' + results[0].address_components[1].long_name + ' # ' +results[0].address_components[0].long_name;
-                    $('#address-calle').val(sector.long_name + ', ' + results[0].address_components[1].long_name);
+                    //$('#address-calle').val(sector.long_name + ', ' + results[0].address_components[1].long_name);
+
                     $('#address-numero').val('');
                     $('#address-alterna').val(results[0].address_components[0].long_name);
                 }
-
+                //por caprichos del cliente
+                //$('#address-calle').val(formatted_addr);
                 $('#address').val(formatted_addr);
                 //--------------------------------            
                 //$('#zone').val(sector.long_name);
