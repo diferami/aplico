@@ -21,8 +21,8 @@
 	//define('ENVIRONMENT', 'testing');
 	//define('ENVIRONMENT', 'development');
 
-	//define('ENVIRONMENT', 'riotaxi');
-	define('ENVIRONMENT', 'mototaps');
+	define('ENVIRONMENT', 'riotaxi');
+	//define('ENVIRONMENT', 'mototaps');
 	//define('ENVIRONMENT', 'mitaxijj');
 	//define('ENVIRONMENT', 'buskoo');
 	//define('ENVIRONMENT', 'pidataxi');
