@@ -131,7 +131,7 @@
 
 				<!--<?=lang('dashboard.callconfirm.you_addrees')?>-->
 				<input name="address-calle" id="address-calle" value="" type="text">
-				wwwwwwwwww<span id="sp-address-calle">xxxxxxxxxx</span>
+				
 			    <input name="address-reference" id="address-reference" placeholder="<?=lang('dashboard.callconfirm.address-reference')?>" value="" type="text">
 
 			<div id="waiting-msg"><h1><?=lang('dashboard.searching')?></h1></div>
